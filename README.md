@@ -30,7 +30,8 @@ A black-and-white landing page showcasing every CREAO use case across **18 categ
 ## Files
 
 - `index.html` — the single-file landing page (inline CSS + JS, no build step)
-- `creao-wordmark.png` — CREAO logo + name wordmark used in the nav and hero
+- `creao-mark.svg` — CREAO brand mark used in the nav, hero, footer, and favicon
+- `creao-wordmark.png` — CREAO wordmark (legacy asset, no longer referenced)
 - `vercel.json` — Vercel static-site config (clean URLs, security headers)
 - `.gitignore` — standard ignores
 
