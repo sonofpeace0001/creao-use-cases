@@ -1,0 +1,2781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CREAO — All Use Cases, All Angles | Make Money With The Super Agent</title>
+<meta name="description" content="Every CREAO use case in one place. Content creation, marketing, automation, building agents, research, design — with copy-paste prompts, predictable dollar pricing, and how to make money with each one.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============ BLACK & WHITE DESIGN SYSTEM ============ */
+:root{
+  --bg:#0a0a0a;
+  --bg-soft:#111111;
+  --bg-card:#161616;
+  --bg-card-hover:#1c1c1c;
+  --ink:#f5f5f5;
+  --ink-mute:#9a9a9a;
+  --ink-dim:#6a6a6a;
+  --line:#262626;
+  --line-strong:#3a3a3a;
+  --accent:#ffffff;
+  --accent-soft:#e8e8e8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+
+/* ============ TYPOGRAPHY ============ */
+.display{font-weight:800;letter-spacing:-0.04em;line-height:1.02}
+.h1{font-size:clamp(2.6rem,7vw,5.5rem);font-weight:800;letter-spacing:-0.045em;line-height:1.02}
+.h2{font-size:clamp(1.9rem,4vw,3rem);font-weight:700;letter-spacing:-0.03em;line-height:1.05}
+.h3{font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:700;letter-spacing:-0.02em;line-height:1.15}
+.eyebrow{font-size:0.78rem;letter-spacing:0.32em;text-transform:uppercase;font-weight:600;color:var(--ink-dim)}
+.mono{font-family:'JetBrains Mono',monospace}
+
+/* ============ NAV ============ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem 2rem;
+  background:rgba(10,10,10,0.72);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--line);
+}
+.brand{display:flex;align-items:center;gap:0.6rem;cursor:pointer;height:38px}
+.nav-logo-mark{height:32px;width:auto;display:block;filter:brightness(0) invert(1)}
+.brand-name{font-weight:800;font-size:1.05rem;letter-spacing:-0.02em;display:none}
+.brand-name .dot{color:var(--ink-dim)}
+.nav-links{display:flex;align-items:center;gap:0.4rem}
+.nav-links a{
+  font-size:0.85rem;color:var(--ink-mute);font-weight:500;
+  padding:0.5rem 0.85rem;border-radius:8px;
+  transition:color .15s ease,background .15s ease;
+}
+.nav-links a:hover{color:var(--ink);background:var(--bg-card)}
+.nav-cta{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:var(--ink);color:#000;font-weight:600;
+  padding:0.6rem 1.1rem;border-radius:999px;
+  font-size:0.86rem;
+  transition:transform .15s ease;
+}
+.nav-cta:hover{transform:translateY(-1px)}
+.nav-toggle{display:none;background:none;border:1px solid var(--line-strong);color:var(--ink);padding:0.5rem 0.7rem;border-radius:8px;font-size:1rem}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;
+  padding:8rem 2rem 6rem;
+  text-align:center;
+  overflow:hidden;
+}
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);
+  -webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);
+}
+.hero-inner{position:relative;max-width:1080px;margin:0 auto;z-index:2}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  padding:0.5rem 1rem;border-radius:999px;
+  background:var(--bg-card);border:1px solid var(--line-strong);
+  font-size:0.78rem;color:var(--ink-mute);letter-spacing:0.04em;
+  margin-bottom:1.8rem;
+}
+.hero-tag .pulse{
+  width:7px;height:7px;border-radius:50%;background:#fff;
+  box-shadow:0 0 0 0 rgba(255,255,255,0.6);
+  animation:pulse 2.2s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(255,255,255,0.55)}
+  70%{box-shadow:0 0 0 10px rgba(255,255,255,0)}
+  100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}
+}
+.hero h1{margin-bottom:1.5rem}
+.hero h1 .ink{color:#fff}
+.hero h1 .mute{color:var(--ink-dim)}
+.hero-sub{
+  font-size:clamp(1.05rem,2vw,1.35rem);
+  color:var(--ink-mute);max-width:720px;margin:0 auto 2.6rem;
+  font-weight:400;line-height:1.55;
+}
+.hero-sub b{color:var(--ink);font-weight:600}
+.hero-cta-row{display:flex;gap:0.9rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:0.55rem;
+  background:var(--ink);color:#000;font-weight:700;
+  padding:1rem 2rem;border-radius:999px;
+  font-size:1rem;letter-spacing:-0.01em;
+  transition:transform .15s ease,box-shadow .15s ease;
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(255,255,255,0.18)}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:0.55rem;
+  background:transparent;color:var(--ink);font-weight:600;
+  padding:1rem 2rem;border-radius:999px;
+  border:1px solid var(--line-strong);
+  font-size:1rem;
+  transition:background .15s ease,border-color .15s ease;
+}
+.btn-ghost:hover{background:var(--bg-card);border-color:var(--ink-dim)}
+.hero-stats{
+  display:flex;gap:clamp(2rem,5vw,4rem);justify-content:center;flex-wrap:wrap;
+  padding-top:3rem;border-top:1px solid var(--line);
+}
+.hero-stat{text-align:center}
+.hero-stat .num{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-0.03em}
+.hero-stat .label{font-size:0.82rem;color:var(--ink-dim);letter-spacing:0.05em;text-transform:uppercase;margin-top:0.3rem}
+
+/* ============ SECTION SHELL ============ */
+.section{padding:5rem 2rem;max-width:1280px;margin:0 auto}
+.section-head{max-width:760px;margin:0 auto 3rem;text-align:center}
+.section-head .eyebrow{display:block;margin-bottom:1rem}
+.section-head h2{margin-bottom:1rem}
+.section-head p{color:var(--ink-mute);font-size:1.05rem;line-height:1.6}
+.section-head p b{color:var(--ink);font-weight:600}
+
+/* ============ CAPABILITIES STRIP ============ */
+.caps{
+  display:flex;flex-wrap:wrap;gap:0.7rem;justify-content:center;
+  margin-bottom:1rem;
+}
+.cap-chip{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  padding:0.55rem 1rem;border-radius:999px;
+  background:var(--bg-card);border:1px solid var(--line-strong);
+  font-size:0.84rem;color:var(--ink-mute);font-weight:500;
+}
+.cap-chip b{color:var(--ink);font-weight:600}
+
+/* ============ CATEGORY GRID ============ */
+.cat-grid{display:flex;flex-direction:column;gap:1.5rem}
+.cat-card{
+  background:var(--bg-card);
+  border:1px solid var(--line);
+  border-radius:20px;
+  overflow:hidden;
+  transition:border-color .2s ease;
+}
+.cat-card:hover{border-color:var(--line-strong)}
+.cat-head{
+  display:flex;align-items:center;gap:1.2rem;
+  padding:1.5rem 1.8rem;
+  cursor:pointer;
+  border-bottom:1px solid transparent;
+  transition:background .15s ease;
+}
+.cat-head:hover{background:var(--bg-card-hover)}
+.cat-head.open{border-bottom-color:var(--line)}
+.cat-num{
+  flex-shrink:0;
+  width:42px;height:42px;border-radius:11px;
+  border:1px solid var(--line-strong);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'JetBrains Mono',monospace;font-weight:600;font-size:0.95rem;color:var(--ink-dim);
+}
+.cat-title{flex:1}
+.cat-title h3{font-size:1.3rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:0.25rem}
+.cat-title p{font-size:0.92rem;color:var(--ink-mute);font-weight:400}
+.cat-meta{display:flex;align-items:center;gap:1rem;font-size:0.85rem;color:var(--ink-dim)}
+.cat-meta b{color:var(--ink);font-weight:600}
+.cat-meta .count{
+  padding:0.3rem 0.7rem;border-radius:6px;border:1px solid var(--line-strong);
+  font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--ink);
+}
+.chevron{width:18px;height:18px;color:var(--ink-dim);transition:transform .25s ease;flex-shrink:0}
+.cat-head.open .chevron{transform:rotate(180deg)}
+.cat-body{display:none;padding:1.8rem}
+.cat-body.open{display:block}
+
+/* ============ USE CASE ROW ============ */
+.usecase{
+  border-top:1px solid var(--line);
+  padding:1.5rem 0;
+}
+.usecase:first-child{border-top:none;padding-top:0}
+.usecase-row{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1rem}
+.usecase-icon{
+  flex-shrink:0;width:30px;height:30px;border-radius:8px;
+  background:var(--bg-soft);border:1px solid var(--line-strong);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;color:var(--ink);
+}
+.usecase-title{flex:1}
+.usecase-title h4{font-size:1.05rem;font-weight:700;letter-spacing:-0.01em;margin-bottom:0.3rem}
+.usecase-desc{color:var(--ink-mute);font-size:0.92rem;line-height:1.55;margin-bottom:0.85rem}
+.usecase-meta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:0.6rem;font-size:0.82rem;color:var(--ink-dim)}
+.usecase-meta span b{color:var(--ink);font-weight:600}
+.price-tag{
+  display:inline-flex;align-items:center;gap:0.4rem;
+  padding:0.3rem 0.7rem;border-radius:7px;
+  background:#fff;color:#000;font-weight:700;font-size:0.8rem;
+  font-family:'JetBrains Mono',monospace;
+}
+.price-tag.cost{background:transparent;color:var(--ink);border:1px solid var(--line-strong);font-weight:600}
+.price-tag.green{background:#fff;color:#000}
+
+/* ============ PROMPT BLOCK ============ */
+.prompt-block{margin-top:0.6rem}
+.prompt-head{
+  display:flex;align-items:center;justify-content:space-between;
+  font-size:0.74rem;color:var(--ink-dim);letter-spacing:0.12em;text-transform:uppercase;
+  margin-bottom:0.55rem;font-weight:600;
+}
+.prompt-head span:last-child{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--ink-dim)}
+.prompt{
+  background:#000;border:1px solid var(--line-strong);
+  border-radius:11px;padding:1rem 1.2rem;
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.84rem;color:var(--accent-soft);
+  line-height:1.6;
+  white-space:pre-wrap;
+  position:relative;
+}
+.prompt .ph{color:var(--ink-dim)}
+.prompt .ph-key{color:var(--ink)}
+.prompt .ph-value{color:#fff;font-weight:600}
+.prompt .comment{color:var(--ink-dim)}
+.prompt .action{color:#fff;font-weight:700}
+.copy-btn{
+  position:absolute;top:0.7rem;right:0.7rem;
+  background:var(--bg-card);color:var(--ink-mute);
+  border:1px solid var(--line-strong);border-radius:7px;
+  padding:0.3rem 0.7rem;font-size:0.72rem;cursor:pointer;
+  font-family:'Inter',sans-serif;font-weight:600;
+  transition:all .15s ease;
+}
+.copy-btn:hover{background:var(--ink);color:#000;border-color:var(--ink)}
+.copy-btn.copied{background:#fff;color:#000}
+
+/* ============ HOW IT WORKS ============ */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem}
+.step{
+  background:var(--bg-card);border:1px solid var(--line);border-radius:16px;padding:1.6rem;
+  transition:border-color .2s ease;
+}
+.step:hover{border-color:var(--line-strong)}
+.step-num{
+  font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:var(--ink-dim);
+  margin-bottom:1rem;font-weight:600;
+}
+.step h4{font-size:1.05rem;font-weight:700;margin-bottom:0.55rem;letter-spacing:-0.01em}
+.step p{font-size:0.9rem;color:var(--ink-mute);line-height:1.55}
+
+/* ============ PRICING TABLE ============ */
+.price-table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.price-table th,.price-table td{
+  padding:1rem 1.2rem;text-align:left;border-bottom:1px solid var(--line);
+  font-size:0.92rem;
+}
+.price-table th{
+  background:var(--bg-card);color:var(--ink);font-weight:700;font-size:0.85rem;
+  letter-spacing:0.02em;text-transform:uppercase;
+}
+.price-table th:first-child{color:var(--ink-dim)}
+.price-table td{color:var(--ink-mute)}
+.price-table tr:last-child td{border-bottom:none}
+.price-table .plan{color:var(--ink);font-weight:700}
+.price-table .price{color:var(--ink);font-family:'JetBrains Mono',monospace;font-weight:600}
+.price-table .recom{color:var(--ink)}
+
+/* ============ FOOTER CTA ============ */
+.cta-band{
+  position:relative;
+  padding:6rem 2rem;
+  text-align:center;
+  border-top:1px solid var(--line);
+  background:linear-gradient(180deg,transparent,rgba(255,255,255,0.02));
+}
+.cta-band h2{margin-bottom:1.2rem;max-width:720px;margin-left:auto;margin-right:auto}
+.cta-band p{color:var(--ink-mute);font-size:1.1rem;margin-bottom:2.5rem;max-width:600px;margin-left:auto;margin-right:auto}
+.cta-band .aff-link{color:var(--ink);font-weight:600;font-size:0.92rem;margin-top:2rem;display:inline-block;letter-spacing:0.04em;font-family:'JetBrains Mono',monospace}
+
+/* ============ FOOTER ============ */
+footer{border-top:1px solid var(--line);padding:2.5rem 2rem;text-align:center}
+footer p{color:var(--ink-dim);font-size:0.85rem;margin-bottom:0.5rem}
+footer .aff{color:var(--ink-mute);font-family:'JetBrains Mono',monospace;font-size:0.78rem;margin-top:0.8rem;letter-spacing:0.04em}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:860px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg-soft);border-bottom:1px solid var(--line-strong);padding:1rem;gap:0.3rem}
+  .nav-links.open{display:flex}
+  .nav-links a{width:100%}
+  .nav-toggle{display:block}
+  .nav-cta{display:none}
+}
+@media (max-width:640px){
+  .nav{padding:1rem 1.2rem}
+  .hero{padding:7rem 1.2rem 4rem}
+  .section{padding:4rem 1.2rem}
+  .cat-head{padding:1.2rem 1.2rem;gap:0.9rem;flex-wrap:wrap}
+  .cat-body{padding:1.2rem}
+  .hero-stats{gap:1.5rem}
+  .cta-band{padding:4rem 1.2rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="brand" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <img src="creao-wordmark.png" alt="CREAO" class="nav-logo-mark">
+  </div>
+  <button class="nav-toggle" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+  <div class="nav-links" id="navlinks">
+    <a href="#categories">Use Cases</a>
+    <a href="#how">How It Works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#prompts">Prompt Library</a>
+    <a href="#deploy">Deploy Guide</a>
+  </div>
+  <a href="https://agent.creao.ai/@Sonofpeace" class="nav-cta" target="_blank" rel="noopener">Start Free →</a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-tag"><span class="pulse"></span> The Super Agent · Built by CREAO AI</div>
+    <img src="creao-wordmark.png" alt="CREAO" style="height:clamp(48px,9vw,82px);width:auto;display:block;margin:0 auto 1.8rem;filter:brightness(0) invert(1);">
+    <h1 class="h1">
+      Every use case.<br>
+      <span class="ink">Every angle.</span><br>
+      <span class="mute">One Super Agent.</span>
+    </h1>
+    <p class="hero-sub">
+      The complete catalog of what CREAO can do — from writing to image generation to video, building agents, running automation, and connecting your stack. Each use case comes with a <b>copy-paste prompt template</b>, a <b>predictable dollar price</b>, and a clear path to <b>make money with it</b>. All in black and white.
+    </p>
+    <div class="hero-cta-row">
+      <a href="https://agent.creao.ai/@Sonofpeace" class="btn-primary" target="_blank" rel="noopener">Open CREAO Free →</a>
+      <a href="#categories" class="btn-ghost">Browse all use cases</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">18</div><div class="label">Use-Case Categories</div></div>
+      <div class="hero-stat"><div class="num">90+</div><div class="label">Copy-Paste Prompts</div></div>
+      <div class="hero-stat"><div class="num">30+</div><div class="label">Connectors</div></div>
+      <div class="hero-stat"><div class="num">$0</div><div class="label">Start Free</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAPABILITIES STRIP ============ -->
+<section class="section" style="padding-top:1rem">
+  <div class="caps">
+    <span class="cap-chip"><b>Video</b> · Veo + Seedance</span>
+    <span class="cap-chip"><b>Image</b> · up to 4K</span>
+    <span class="cap-chip"><b>Voice</b> · 20+ voices</span>
+    <span class="cap-chip"><b>Browser</b> · real login</span>
+    <span class="cap-chip"><b>Code</b> · writes & runs</span>
+    <span class="cap-chip"><b>Schedule</b> · 24/7 runs</span>
+    <span class="cap-chip"><b>Memory</b> · compounds</span>
+    <span class="cap-chip"><b>Discord</b> + <b>Telegram</b> bots</span>
+    <span class="cap-chip"><b>Logo</b> · <b>Graphics</b> · <b>Web</b></span>
+    <span class="cap-chip"><b>Slack</b> · <b>Teams</b> · <b>Notion</b> · <b>Asana</b></span>
+    <span class="cap-chip"><b>X · YouTube · Gmail · Sheets</b></span>
+    <span class="cap-chip"><b>Trading</b> · <b>Finance</b> · <b>SEO</b></span>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section" id="how">
+  <div class="section-head">
+    <span class="eyebrow">How it works</span>
+    <h2 class="h2">From one prompt to a system that runs itself</h2>
+    <p>Every use case below follows the same loop: <b>describe it → CREAO writes the code → it wires your tools → it runs on schedule → it compounds with memory.</b></p>
+  </div>
+  <div class="steps">
+    <div class="step"><div class="step-num">01</div><h4>Describe it</h4><p>Open a chat with the Super Agent. Say what you want — in plain English. No code, no setup.</p></div>
+    <div class="step"><div class="step-num">02</div><h4>It builds it</h4><p>CREAO writes the code, wires your connectors (X, YouTube, Gmail, Sheets, Discord), and runs it in a secure sandbox.</p></div>
+    <div class="step"><div class="step-num">03</div><h4>Save it as an Agent</h4><p>One click turns that conversation into a reusable Agent with structured inputs and version control.</p></div>
+    <div class="step"><div class="step-num">04</div><h4>Schedule it</h4><p>Run it once, hourly, daily, or on a trigger. Set full-auto or approval gates. It remembers and improves.</p></div>
+  </div>
+</section>
+
+<!-- ============ CATEGORIES ============ -->
+<section class="section" id="categories">
+  <div class="section-head">
+    <span class="eyebrow">All use cases · all angles</span>
+    <h2 class="h2">18 categories of work CREAO can do for you</h2>
+    <p>Each category expands into a list of use cases. Every use case ships with a <b>copy-paste prompt template</b>, a <b>realistic cost estimate</b>, and a <b>monetization angle</b> showing how to turn that capability into income. From writing and images to video, building agents, Discord and Telegram bots, logo and graphic design, website building, browser automation, trading, and specialized industries — nothing is left out.</p>
+  </div>
+  <div class="cat-grid" id="catGrid">
+
+    <!-- ============ CATEGORY 01 — CONTENT CREATION ============ -->
+    <article class="cat-card">
+      <div class="cat-head" onclick="toggleCat(this)">
+        <div class="cat-num">01</div>
+        <div class="cat-title"><h3>Content Creation</h3><p>Writing, scripts, prompts, articles, blog posts — built for the web.</p></div>
+        <div class="cat-meta"><span class="count">8 uses</span><span><b>$0</b> start</span></div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="cat-body">
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>SEO blog post generator</h4>
+          <p class="usecase-desc">Write a full SEO-optimized article from a single keyword. Output is ready to publish on WordPress, Medium, or your own site.</p>
+          <div class="usecase-meta"><span class="price-tag">~$15 / article</span><span class="price-tag cost">deliverable value: $80–$300</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Write a full SEO blog post.</span>
+Target keyword: <span class="ph-key">[KEYWORD]</span>
+Topic: <span class="ph-key">[TOPIC]</span>
+Word count: <span class="ph-key">[1500–2500 words]</span>
+Audience: <span class="ph-key">[WHO]</span>
+Tone: <span class="ph-key">[informative/conversational/authoritative]</span>
+
+Structure: H1 title → meta description → intro hook → 5–7 H2 sections with H3s → FAQ block → conclusion → CTA.
+Include internal links to <span class="ph-key">[URL]</span>. Add a table of contents. Output as clean Markdown ready to publish.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>X / Twitter thread writer</h4>
+          <p class="usecase-desc">Turn a topic into a viral thread: hook, 7–10 body tweets, CTA. Tuned for engagement velocity.</p>
+          <div class="usecase-meta"><span class="price-tag">~$5 / thread</span><span class="price-tag cost">deliverable value: $40–$200 freelance</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Write a viral X thread.</span>
+Topic: <span class="ph-key">[TOPIC]</span>
+Niche: <span class="ph-key">[AI agents / personal finance / startups]</span>
+Hook style: <span class="ph-key">[contrarian / question / listicle / story]</span>
+Length: <span class="ph-key">[8–12 tweets]</span>
+End with a CTA pointing to <span class="ph-key">https://agent.creao.ai/@Sonofpeace</span>.
+
+Rules: no em dashes, no emojis, no AI buzzwords, contractions on, short sentences, high burstiness. Each tweet must work alone if scrolled to.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>YouTube Shorts script generator</h4>
+          <p class="usecase-desc">Generate a retention-engineered short-form video script with hook, pacing beats, and SEO metadata.</p>
+          <div class="usecase-meta"><span class="price-tag">~$8 / script</span><span class="price-tag cost">deliverable value: $50–$150</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Write a YouTube Shorts script.</span>
+Topic: <span class="ph-key">[TOPIC]</span>
+Length: <span class="ph-key">[40–60 sec]</span>
+Audience: <span class="ph-key">[gen-z / professionals]</span>
+Hook: <span class="ph-key">[open mid-action]</span>
+
+Output: hook line → 6–8 pacing beats with timestamps → closing CTA → title (≤70 chars) → description → 5 hashtags. No filler words.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Email newsletter writer</h4>
+          <p class="usecase-desc">Draft a complete weekly newsletter with intro, links, and CTAs — ready to send via Gmail connector.</p>
+          <div class="usecase-meta"><span class="price-tag">~$10 / email</span><span class="price-tag cost">deliverable value: $75–$250</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Write a weekly email newsletter.</span>
+Subject line: <span class="ph-key">[optional]</span>
+Theme: <span class="ph-key">[THEME]</span>
+Audience: <span class="ph-key">[WHO]</span>
+Include: 3 curated links, 1 takeaway, 1 question to drive replies.
+
+Subject line ≤ 50 chars. Plain text only. Open with a 1-sentence hook. End with a soft CTA to <span class="ph-key">https://agent.creao.ai/@Sonofpeace</span>.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>LinkedIn post generator</h4>
+          <p class="usecase-desc">Build a polished LinkedIn post with a strong hook, structured body, and a single line break rhythm.</p>
+          <div class="usecase-meta"><span class="price-tag">~$5 / post</span><span class="price-tag cost">deliverable value: $30–$120</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Write a LinkedIn post.</span>
+Topic: <span class="ph-key">[TOPIC]</span>
+Author role: <span class="ph-key">[founder / PM / consultant]</span>
+Hook type: <span class="ph-key">[observation / contrarian / lesson learned]</span>
+
+Format: 1-sentence hook → blank line → short paragraphs of 1–2 lines → CTA asking for comments. No emojis. Plain text only.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Podcast script / show notes</h4>
+          <p class="usecase-desc">Generate a full podcast script with intro, segments, and timestamps, plus show notes ready to publish.</p>
+          <div class="usecase-meta"><span class="price-tag">~$15 / episode</span><span class="price-tag cost">deliverable value: $60–$200</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Write a podcast script.</span>
+Show name: <span class="ph-key">[SHOW NAME]</span>
+Episode topic: <span class="ph-key">[TOPIC]</span>
+Length: <span class="ph-key">[15–20 min]</span>
+Host: <span class="ph-key">[NAME]</span>, optional guest: <span class="ph-key">[GUEST]</span>
+
+Output: cold open → intro → 4–6 numbered segments with timestamps → closing CTA → show notes (title + summary + 5 bullet points).
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Product description writer</h4>
+          <p class="usecase-desc">Bulk-write conversion-focused product descriptions for an e-commerce store (Shopify-compatible).</p>
+          <div class="usecase-meta"><span class="price-tag">~$2 / product</span><span class="price-tag cost">deliverable value: $5–$15 each</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Write product descriptions.</span>
+Products (paste list): <span class="ph-key">[PRODUCT NAMES + 1-line features]</span>
+Brand voice: <span class="ph-key">[premium / playful / minimal]</span>
+Format: title (≤60 chars) → 2-sentence description → 3 bullet benefits → CTA.
+
+Output a clean table: Product | Title | Description | Bullets | CTA.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Lead magnet generator</h4>
+          <p class="usecase-desc">Turn a topic into a downloadable PDF guide, checklist, or template — built to grow an email list.</p>
+          <div class="usecase-meta"><span class="price-tag">~$20 / lead magnet</span><span class="price-tag cost">deliverable value: $100–$400</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Build a lead magnet PDF.</span>
+Type: <span class="ph-key">[checklist / 5-page guide / template pack]</span>
+Topic: <span class="ph-key">[TOPIC]</span>
+Target reader: <span class="ph-key">[WHO]</span>
+Promise: <span class="ph-key">[WHAT THEY GET IN 5 MINUTES]</span>
+
+Output: cover page → 1-line promise → 5–10 sections → CTA to <span class="ph-key">https://agent.creao.ai/@Sonofpeace</span>. Format as clean HTML ready to export as PDF.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ============ CATEGORY 02 — IMAGE GENERATION ============ -->
+    <article class="cat-card">
+      <div class="cat-head" onclick="toggleCat(this)">
+        <div class="cat-num">02</div>
+        <div class="cat-title"><h3>Image Generation</h3><p>Photorealistic images, illustrations, product shots, ad creatives — up to 4K, no extra tool.</p></div>
+        <div class="cat-meta"><span class="count">7 uses</span><span><b>$0</b> start</span></div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="cat-body">
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Product photography (studio-grade)</h4>
+          <p class="usecase-desc">Generate clean product shots on a clean background — no camera, no studio, no retouching needed.</p>
+          <div class="usecase-meta"><span class="price-tag">~$3 / image</span><span class="price-tag cost">deliverable value: $25–$80 each</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>image generation</span></div>
+            <div class="prompt"><span class="action">Generate an image:</span>
+Product: <span class="ph-key">[PRODUCT NAME]</span>
+Material: <span class="ph-key">[matte glass / brushed metal / wood]</span>
+Background: <span class="ph-key">[pure white studio background]</span>
+Lighting: <span class="ph-key">[softbox, even, no harsh shadows]</span>
+Angle: <span class="ph-key">[front 3/4 view]</span>
+Style: photorealistic product photography, ultra-detailed, 4K, centered composition.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Ad creative set</h4>
+          <p class="usecase-desc">Generate 5 variations of an ad creative in different formats — perfect for testing on Meta and Google Ads.</p>
+          <div class="usecase-meta"><span class="price-tag">~$15 / set</span><span class="price-tag cost">deliverable value: $150–$400</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>image generation</span></div>
+            <div class="prompt"><span class="action">Generate 5 ad creatives.</span>
+Product: <span class="ph-key">[PRODUCT]</span>
+Hook angle: <span class="ph-key">[pain point / benefit / curiosity / social proof]</span>
+Format: square (1:1) for Meta, vertical (9:16) for Stories, banner (1200×628)
+Style: clean, bold headline overlay, modern minimal layout.
+
+Generate one per angle. Keep brand colors consistent across all five.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Logo & icon set</h4>
+          <p class="usecase-desc">Generate a clean logo mark plus a matching icon set for an app, brand, or product.</p>
+          <div class="usecase-meta"><span class="price-tag">~$10 / logo</span><span class="price-tag cost">deliverable value: $80–$350</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>image generation</span></div>
+            <div class="prompt"><span class="action">Generate a logo.</span>
+Brand: <span class="ph-key">[NAME]</span>
+Style: <span class="ph-key">[minimalist / monogram / geometric / wordmark]</span>
+Vibe: <span class="ph-key">[premium / playful / technical]</span>
+Colors: black and white only
+Output: clean white background, centered, scalable vector look.
+
+Then generate a matching icon set of 6 small icons in the same style.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>YouTube thumbnail</h4>
+          <p class="usecase-desc">Generate a scroll-stopping thumbnail with bold text overlay and emotional face.</p>
+          <div class="usecase-meta"><span class="price-tag">~$4 / thumbnail</span><span class="price-tag cost">deliverable value: $15–$60</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>image generation</span></div>
+            <div class="prompt"><span class="action">Generate a YouTube thumbnail.</span>
+Video topic: <span class="ph-key">[TOPIC]</span>
+Emotion: <span class="ph-key">[shocked / curious / excited]</span>
+Text overlay: <span class="ph-key">[≤5 WORDS]</span>
+Composition: high contrast, bold large text, subject on left third, text on right third.
+Format: 1280×720. Style: YouTube thumbnail, high saturation, eye-catching.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Social media content pack</h4>
+          <p class="usecase-desc">Generate a full set of images for a week of social posts — quotes, captions, and visuals.</p>
+          <div class="usecase-meta"><span class="price-tag">~$25 / week</span><span class="price-tag cost">deliverable value: $150–$400</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>image generation</span></div>
+            <div class="prompt"><span class="action">Generate a 7-day social pack.</span>
+Brand: <span class="ph-key">[BRAND NAME]</span>
+Theme: <span class="ph-key">[TOPIC]</span>
+Style: black and white, bold typography, modern minimal.
+Format: square (1:1) for posts, vertical (9:16) for Stories.
+
+Generate 7 images — one per day. Each image carries one quote, one tip, or one question. Add a caption for each.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Illustrated explainer set</h4>
+          <p class="usecase-desc">Generate a set of diagrams or illustrations to explain a concept step by step.</p>
+          <div class="usecase-meta"><span class="price-tag">~$15 / set</span><span class="price-tag cost">deliverable value: $80–$250</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>image generation</span></div>
+            <div class="prompt"><span class="action">Generate 5 explainer illustrations.</span>
+Concept: <span class="ph-key">[CONCEPT]</span>
+Style: clean line art, minimal color, white background, labeled clearly.
+Each illustration shows one step in a sequence: <span class="ph-key">[step 1, step 2, step 3...]</span>.
+
+Add a short caption under each illustration explaining what it shows.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Character consistency sheet</h4>
+          <p class="usecase-desc">Generate a single character sheet showing a character from multiple angles — keeps identity locked across scenes.</p>
+          <div class="usecase-meta"><span class="price-tag">~$6 / sheet</span><span class="price-tag cost">deliverable value: $40–$120</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>image generation</span></div>
+            <div class="prompt"><span class="action">Generate a character consistency sheet.</span>
+Character name: <span class="ph-key">[NAME]</span>
+Age, gender, ethnicity: <span class="ph-key">[AGE / GENDER / ETHNICITY]</span>
+Fixed identity: <span class="ph-key">[hair, eyes, build, permanent accessories]</span>
+Outfit: <span class="ph-key">[ONE OUTFIT, never changes]</span>
+
+Output: front view, side view, back view, 3/4 view — same character, same face, same outfit across all four frames.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ============ CATEGORY 03 — VIDEO GENERATION ============ -->
+    <article class="cat-card">
+      <div class="cat-head" onclick="toggleCat(this)">
+        <div class="cat-num">03</div>
+        <div class="cat-title"><h3>Video Generation</h3><p>Cinematic video via Google Veo + BytePlus Seedance — text-to-video, image-to-video, edits.</p></div>
+        <div class="cat-meta"><span class="count">7 uses</span><span><b>$0</b> start</span></div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="cat-body">
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Product launch video</h4>
+          <p class="usecase-desc">Generate a cinematic 8-second product launch video from a single image or text prompt.</p>
+          <div class="usecase-meta"><span class="price-tag">~$15 / video</span><span class="price-tag cost">deliverable value: $200–$800</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>video generation</span></div>
+            <div class="prompt"><span class="action">Generate a product launch video.</span>
+Product: <span class="ph-key">[PRODUCT]</span>
+Style: cinematic, premium, dramatic lighting, shallow depth of field.
+Duration: 8 seconds.
+Aspect ratio: 16:9 landscape.
+Start image: <span class="ph-key">[attach image]</span>
+Mood: anticipation, reveal, satisfaction.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>YouTube Shorts — full automation</h4>
+          <p class="usecase-desc">Generate a full short-form video: script → 7 Veo clips → stitched with ffmpeg → voiceover → uploaded to YouTube.</p>
+          <div class="usecase-meta"><span class="price-tag">~$60 / short</span><span class="price-tag cost">deliverable value: $150–$500</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>video generation</span></div>
+            <div class="prompt"><span class="action">Build a YouTube Shorts video pipeline.</span>
+Topic: <span class="ph-key">[TOPIC]</span>
+Voice: <span class="ph-key">[Puck / Charon / Kore]</span>
+Audience: <span class="ph-key">[gen-z]</span>
+Length: 45–60 seconds total, split into 7 clips of ~7 seconds each.
+
+Steps:
+1. Write a retention-engineered script with timestamps.
+2. Generate 7 Veo clips (vertical 9:16) using the script beats as prompts.
+3. Stitch them with ffmpeg, add the voiceover, add captions.
+4. Output a title, description, and 5 hashtags.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Animated explainer</h4>
+          <p class="usecase-desc">Generate a 15-second animated explainer for a product or service using first-and-last-frame guidance.</p>
+          <div class="usecase-meta"><span class="price-tag">~$25 / video</span><span class="price-tag cost">deliverable value: $150–$500</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>video generation</span></div>
+            <div class="prompt"><span class="action">Generate an animated explainer.</span>
+Product: <span class="ph-key">[PRODUCT]</span>
+Problem: <span class="ph-key">[PROBLEM]</span>
+Solution: <span class="ph-key">[SOLUTION]</span>
+First frame: <span class="ph-key">[attach image]</span>
+Last frame: <span class="ph-key">[attach image]</span>
+Style: clean motion graphics, minimal, modern.
+Duration: 15 seconds.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Social media reel</h4>
+          <p class="usecase-desc">Generate a vertical reel optimized for Instagram Reels, TikTok, and YouTube Shorts.</p>
+          <div class="usecase-meta"><span class="price-tag">~$12 / reel</span><span class="price-tag cost">deliverable value: $50–$200</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>video generation</span></div>
+            <div class="prompt"><span class="action">Generate a social media reel.</span>
+Topic: <span class="ph-key">[TOPIC]</span>
+Style: trendy, energetic, dynamic cuts.
+Duration: 8 seconds.
+Aspect ratio: 9:16 vertical.
+Trend: <span class="ph-key">[insert trending audio feel]</span>
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Cinematic ad spot</h4>
+          <p class="usecase-desc">Generate a high-end commercial spot — think brand film, not a demo reel.</p>
+          <div class="usecase-meta"><span class="price-tag">~$30 / spot</span><span class="price-tag cost">deliverable value: $400–$1500</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>video generation</span></div>
+            <div class="prompt"><span class="action">Generate a cinematic ad spot.</span>
+Brand: <span class="ph-key">[BRAND]</span>
+Style: cinematic, golden hour, anamorphic lens flare, slow motion.
+Duration: 8 seconds.
+Aspect ratio: 16:9.
+Mood: aspirational, confident, restrained.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Story sequence (multi-scene)</h4>
+          <p class="usecase-desc">Build a 3–5 scene cinematic story with consistent characters across scenes, then stitch them together.</p>
+          <div class="usecase-meta"><span class="price-tag">~$50 / story</span><span class="price-tag cost">deliverable value: $300–$1000</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>video generation</span></div>
+            <div class="prompt"><span class="action">Build a multi-scene cinematic story.</span>
+Premise: <span class="ph-key">[PREMISE]</span>
+Character: <span class="ph-key">[CHARACTER NAME + IDENTITY]</span>
+Number of scenes: <span class="ph-key">[3–5]</span>
+Aspect ratio: <span class="ph-key">[16:9]</span>
+
+Steps:
+1. Write the scene breakdown (hook, conflict, resolution).
+2. Generate each scene with consistent character identity across scenes.
+3. Stitch with ffmpeg transitions.
+4. Output final video file.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Video edit (restyle existing clip)</h4>
+          <p class="usecase-desc">Edit an existing video — change wardrobe, restyle the scene, remove objects — without losing the original scene.</p>
+          <div class="usecase-meta"><span class="price-tag">~$20 / edit</span><span class="price-tag cost">deliverable value: $100–$400</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>video editing</span></div>
+            <div class="prompt"><span class="action">Edit this existing video.</span>
+Reference video: <span class="ph-key">[attach video]</span>
+Change: <span class="ph-key">[change wardrobe to a black suit / change background to night cityscape]</span>
+Keep everything else exactly the same.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ============ CATEGORY 04 — MARKETING ============ -->
+    <article class="cat-card">
+      <div class="cat-head" onclick="toggleCat(this)">
+        <div class="cat-num">04</div>
+        <div class="cat-title"><h3>Marketing & Growth</h3><p>Cold outreach, social scheduling, ad copy, competitor analysis — wired to your stack.</p></div>
+        <div class="cat-meta"><span class="count">7 uses</span><span><b>$0</b> start</span></div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="cat-body">
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Cold email sequence</h4>
+          <p class="usecase-desc">Generate a 5-step cold email sequence tailored to one persona — sent via Gmail connector.</p>
+          <div class="usecase-meta"><span class="price-tag">~$15 / sequence</span><span class="price-tag cost">deliverable value: $200–$600</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Write a 5-step cold email sequence.</span>
+Product: <span class="ph-key">[PRODUCT]</span>
+Persona: <span class="ph-key">[ROLE / INDUSTRY]</span>
+Pain point: <span class="ph-key">[PAIN]</span>
+Goal: book a 15-min call.
+
+Steps:
+1. First-touch — problem-aware opener.
+2. Follow-up — proof point.
+3. Value-add — case study link.
+4. Breakup — give them permission to ignore.
+5. Final — short note, single CTA.
+
+Each email ≤120 words. Plain text. Subject line ≤50 chars. No emojis. End with a clear CTA.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Google Ads copywriter</h4>
+          <p class="usecase-desc">Generate a full set of headlines, descriptions, and sitelinks for a Google Ads campaign.</p>
+          <div class="usecase-meta"><span class="price-tag">~$10 / campaign</span><span class="price-tag cost">deliverable value: $80–$300</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Write Google Ads copy.</span>
+Product: <span class="ph-key">[PRODUCT]</span>
+Keywords: <span class="ph-key">[KEYWORD LIST]</span>
+USP: <span class="ph-key">[USP]</span>
+
+Output: 15 headlines (≤30 chars each), 4 descriptions (≤90 chars each), 4 sitelinks (label + description). All keyword-relevant.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Social media scheduling agent</h4>
+          <p class="usecase-desc">Schedule a week of posts across X, YouTube, and Discord — runs automatically every day.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / week</span><span class="price-tag cost">deliverable value: $300–$1500/mo retainer</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a scheduled social media agent.</span>
+Platforms: <span class="ph-key">[X, YouTube Shorts, Discord]</span>
+Cadence: <span class="ph-key">[every 2 hours on X, daily on YouTube, weekly on Discord]</span>
+Topic: <span class="ph-key">[TOPIC]</span>
+Style: <span class="ph-key">[BRAND VOICE]</span>
+
+Steps:
+1. Write the next 14 days of posts.
+2. Connect X, YouTube, and Discord connectors.
+3. Schedule them on a recurring basis.
+4. Send me a summary every morning of what was posted.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Competitor analysis report</h4>
+          <p class="usecase-desc">Scrape competitor websites, summarize their positioning, pricing, and gaps — output a clean PDF report.</p>
+          <div class="usecase-meta"><span class="price-tag">~$15 / report</span><span class="price-tag cost">deliverable value: $150–$600</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a competitor analysis agent.</span>
+Competitors: <span class="ph-key">[URL 1, URL 2, URL 3]</span>
+Focus: <span class="ph-key">[pricing / positioning / features / messaging]</span>
+Output: clean PDF report comparing all three across the same dimensions.
+
+Steps:
+1. Scrape each URL.
+2. Extract positioning, pricing tiers, key features.
+3. Identify gaps and opportunities.
+4. Output as a downloadable PDF report.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Lead scoring & enrichment</h4>
+          <p class="usecase-desc">Pull a list of leads, score each one based on firmographics, and write a personalized opener for each.</p>
+          <div class="usecase-meta"><span class="price-tag">~$20 / batch</span><span class="price-tag cost">deliverable value: $200–$800</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a lead enrichment agent.</span>
+Input list: <span class="ph-key">[CSV of leads with company names]</span>
+Scoring criteria: <span class="ph-key">[industry, headcount, growth signals]</span>
+Output: enriched CSV with a score (0–100) and a personalized first-line opener for each lead.
+
+Steps:
+1. Read the CSV from Google Sheets.
+2. Score each row.
+3. Write a personalized opener per lead.
+4. Write back to Google Sheets.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>SEO content brief writer</h4>
+          <p class="usecase-desc">Generate a full content brief for a target keyword: intent, outline, links, internal references.</p>
+          <div class="usecase-meta"><span class="price-tag">~$5 / brief</span><span class="price-tag cost">deliverable value: $30–$120</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Write an SEO content brief.</span>
+Target keyword: <span class="ph-key">[KEYWORD]</span>
+Content type: <span class="ph-key">[blog post / landing page / comparison]</span>
+
+Output: search intent → suggested title → outline (H1, H2s, H3s) → suggested internal links → suggested external links → 3 People Also Ask questions → word count target → suggested meta description.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Brand voice generator</h4>
+          <p class="usecase-desc">Reverse-engineer a brand voice from existing content, then apply it to everything new.</p>
+          <div class="usecase-meta"><span class="price-tag">~$5 / voice profile</span><span class="price-tag cost">deliverable value: $200–$800 (one-time setup)</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Build a brand voice profile.</span>
+Source content: <span class="ph-key">[paste 5 examples of your best content]</span>
+Output: a 1-page voice profile covering tone, vocabulary rules, sentence length, banned words, signature phrases, and 3 example sentences.
+
+Then apply it to everything else I write.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ============ CATEGORY 05 — AUTOMATION ============ -->
+    <article class="cat-card">
+      <div class="cat-head" onclick="toggleCat(this)">
+        <div class="cat-num">05</div>
+        <div class="cat-title"><h3>Automation & Scheduling</h3><p>Run work on a schedule. Connectors + memory + scheduled runs = work that runs itself.</p></div>
+        <div class="cat-meta"><span class="count">6 uses</span><span><b>$0</b> start</span></div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="cat-body">
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Competitor price monitor</h4>
+          <p class="usecase-desc">Scrape competitor pricing pages weekly, save to Google Sheets, alert you on drops.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: $400–$1500 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a competitor price monitor.</span>
+Competitor URLs: <span class="ph-key">[URL LIST]</span>
+Schedule: every Monday at 9:00 AM UTC.
+Output: Google Sheets with a row per product, columns for price, change vs last week.
+
+Steps:
+1. Connect Google Sheets connector.
+2. Scrape each URL using the browser tool.
+3. Save prices to Sheets.
+4. Send me an email alert if any price drops by more than 5%.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Inventory snapshot agent</h4>
+          <p class="usecase-desc">Pull stock levels every 4 hours, flag SKUs at risk of stockout, surface reorder math.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: $200–$800/mo saved</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build an inventory snapshot agent.</span>
+Source: <span class="ph-key">[Shopify connector / Google Sheets]</span>
+Schedule: every 4 hours.
+Output: a dashboard listing low-stock SKUs, suggested reorder quantity, and ETA.
+
+Steps:
+1. Pull current stock levels.
+2. Flag SKUs below threshold.
+3. Calculate reorder quantity (lead time × avg daily sales).
+4. Send me a summary every morning at 8 AM.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Daily email summary agent</h4>
+          <p class="usecase-desc">Summarize unread emails each morning and send you a single digest with action items.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: 5 hours saved per week</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a daily email summary agent.</span>
+Connector: <span class="ph-key">[Gmail]</span>
+Schedule: every morning at 8:00 AM local time.
+Output: a single email summarizing all unread messages from yesterday with action items grouped by urgency.
+
+Steps:
+1. Read unread emails since last run.
+2. Group by urgency (urgent / today / this week).
+3. Summarize each in one line.
+4. Send me a single digest email with action items.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Calendar & meeting prep agent</h4>
+          <p class="usecase-desc">Read today's calendar, prepare a one-page brief for each meeting including attendees and context.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: 3 hours saved per week</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a meeting prep agent.</span>
+Connector: <span class="ph-key">[Google Calendar]</span>
+Schedule: every morning at 7:00 AM local time.
+Output: a single-page brief for each meeting today.
+
+Steps:
+1. Read today's events from Calendar.
+2. For each meeting, pull attendees, recent emails, and notes from prior meetings.
+3. Write a one-page brief per meeting.
+4. Email me the whole stack at 7:30 AM.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Report generator (weekly)</h4>
+          <p class="usecase-desc">Generate a weekly business report from Google Analytics, Search Console, and Sheets.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: $300–$1000/mo saved</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a weekly business report agent.</span>
+Connectors: <span class="ph-key">[Google Analytics, Search Console, Google Sheets]</span>
+Schedule: every Friday at 4:00 PM local time.
+Output: a clean PDF report.
+
+Steps:
+1. Pull traffic, conversions, and revenue from Analytics.
+2. Pull search queries and clicks from Search Console.
+3. Pull spend data from Sheets.
+4. Build a single-page PDF report.
+5. Email it to <span class="ph-key">[EMAIL]</span>.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Quote responder</h4>
+          <p class="usecase-desc">Auto-read incoming quote requests, draft a reply with pricing and inventory, send it.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: hours saved per week</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a quote responder agent.</span>
+Trigger: every inbound quote email.
+Output: a draft reply with pricing and inventory, ready to send.
+
+Steps:
+1. Watch for new quote-request emails.
+2. Look up pricing and inventory in Sheets.
+3. Draft a quote reply.
+4. Send me an approval gate before sending — never send automatically.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ============ CATEGORY 06 — BUILDING AGENTS ============ -->
+    <article class="cat-card">
+      <div class="cat-head" onclick="toggleCat(this)">
+        <div class="cat-num">06</div>
+        <div class="cat-title"><h3>Building Agents</h3><p>Turn any workflow into a reusable, scheduled Agent App with memory and connectors.</p></div>
+        <div class="cat-meta"><span class="count">6 uses</span><span><b>$0</b> start</span></div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="cat-body">
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>From scratch — describe it → get an agent</h4>
+          <p class="usecase-desc">Describe what you want done. CREAO writes the code, wires connectors, and saves it as an agent.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / agent</span><span class="price-tag cost">deliverable value: $500–$5000 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build me an agent.</span>
+Name: <span class="ph-key">[AGENT NAME]</span>
+Purpose: <span class="ph-key">[WHAT IT DOES IN ONE LINE]</span>
+Inputs: <span class="ph-key">[LIST OF FIELDS]</span>
+Connectors needed: <span class="ph-key">[Gmail, Sheets, X]</span>
+Schedule: <span class="ph-key">[daily / hourly / on-demand]</span>
+Output format: <span class="ph-key">[email / PDF / sheet row]</span>
+
+Steps:
+1. Write the code.
+2. Wire the connectors.
+3. Test it once with sample data.
+4. Save it as a reusable agent app.
+5. Set up the schedule.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>YouTube automation agent</h4>
+          <p class="usecase-desc">Full pipeline: script → voiceover → Veo clips → stitched → uploaded to YouTube.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 setup</span><span class="price-tag cost">deliverable value: $1500–$5000 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a YouTube automation agent.</span>
+Niche: <span class="ph-key">[NICHE]</span>
+Cadence: <span class="ph-key">[one video per day]</span>
+Voice: <span class="ph-key">[Puck]</span>
+Style: <span class="ph-key">[GEN-Z ENERGY]</span>
+
+Steps:
+1. Each morning at 7 AM, pick a trending topic from web search.
+2. Write a 45-second script with hook + retention beats.
+3. Generate 7 Veo clips (vertical 9:16).
+4. Generate voiceover with the chosen voice.
+5. Stitch them together with ffmpeg.
+6. Upload to YouTube Shorts.
+7. Send me a summary every morning.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>X / Twitter growth engine</h4>
+          <p class="usecase-desc">Generate and post high-engagement tweets on a schedule, with anti-shadowban rotation built in.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 setup</span><span class="price-tag cost">deliverable value: $500–$2000 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build an X growth engine.</span>
+Account: <span class="ph-key">[@HANDLE]</span>
+Cadence: <span class="ph-key">[every 2 hours]</span>
+Format: <span class="ph-key">[single tweet / thread / short_thread_2]</span>
+Style: <span class="ph-key">[BRAND VOICE]</span>
+
+Steps:
+1. Generate 12 tweets per day.
+2. Apply humanizer pass (no em dashes, no AI vocabulary).
+3. Post to X via the connector.
+4. Send me a daily summary in Discord.
+5. Track engagement metrics over time.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Discord community manager</h4>
+          <p class="usecase-desc">A Discord bot that handles FAQs, welcomes new members, reacts to GM/GN, tracks engagement.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 setup</span><span class="price-tag cost">deliverable value: $800–$3000 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a Discord community manager.</span>
+Server ID: <span class="ph-key">[ID]</span>
+Features: <span class="ph-key">[welcome message, FAQ engine, GM/GN reactions, point system]</span>
+
+Steps:
+1. Welcome new members automatically.
+2. Reply to FAQ questions in the dedicated FAQ channel.
+3. React to GM/GN messages with a custom emoji.
+4. Track engagement points per member.
+5. Build a leaderboard and post it weekly.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Trading bot</h4>
+          <p class="usecase-desc">Run a trading bot against a crypto exchange API on a schedule with risk controls.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 setup</span><span class="price-tag cost">deliverable value: live trading P&L</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a trading agent.</span>
+Exchange: <span class="ph-key">[WEEX]</span>
+Pair: <span class="ph-key">[BTCUSDT / ETHUSDT]</span>
+Direction: <span class="ph-key">[long / short / both]</span>
+Risk per trade: <span class="ph-key">[X%]</span>
+Daily loss cap: <span class="ph-key">[X%]</span>
+Cadence: every 2 hours.
+
+Steps:
+1. Pull current price + ATR.
+2. Check for entry signals based on regime filter.
+3. If signal fires, place the order with TP/SL set.
+4. Send me a Discord notification with the trade details.
+5. Track daily loss and stop trading if cap is hit.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Lead magnet builder agent</h4>
+          <p class="usecase-desc">Build a lead-magnet PDF generator that runs from a single prompt each month.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 setup</span><span class="price-tag cost">deliverable value: $200–$800 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a lead magnet generator agent.</span>
+Topic input: <span class="ph-key">[USER-PROVIDED]</span>
+Output: a clean PDF guide, ready to gate behind an email capture form.
+
+Steps:
+1. Generate a cover page with a strong hook.
+2. Build a 5–10 section outline.
+3. Write the content per section.
+4. Output as a downloadable PDF saved to my workspace.
+5. Send me the link to share.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ============ CATEGORY 07 — RESEARCH & ANALYSIS ============ -->
+    <article class="cat-card">
+      <div class="cat-head" onclick="toggleCat(this)">
+        <div class="cat-num">07</div>
+        <div class="cat-title"><h3>Research & Analysis</h3><p>Market sizing, trend tracking, financial analysis, due diligence reports.</p></div>
+        <div class="cat-meta"><span class="count">5 uses</span><span><b>$0</b> start</span></div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="cat-body">
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Market sizing analysis</h4>
+          <p class="usecase-desc">Estimate TAM, SAM, and SOM for a startup idea using bottom-up and top-down approaches.</p>
+          <div class="usecase-meta"><span class="price-tag">~$10 / report</span><span class="price-tag cost">deliverable value: $300–$1500</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Build a market sizing report.</span>
+Product: <span class="ph-key">[PRODUCT]</span>
+Geography: <span class="ph-key">[REGION]</span>
+Timeframe: <span class="ph-key">[YEAR]</span>
+
+Output: clean PDF report covering TAM (top-down), SAM (bottom-up), SOM (realistic 3-year capture), with assumptions stated clearly and sources cited.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Competitor landscape report</h4>
+          <p class="usecase-desc">Porter's Five Forces analysis across a defined set of competitors.</p>
+          <div class="usecase-meta"><span class="price-tag">~$15 / report</span><span class="price-tag cost">deliverable value: $200–$800</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Build a competitor landscape report.</span>
+Industry: <span class="ph-key">[INDUSTRY]</span>
+Competitors: <span class="ph-key">[NAME LIST]</span>
+
+Output: clean PDF report with Porter's Five Forces analysis, positioning matrix, differentiation opportunities, and a final SWOT.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Trend tracking agent</h4>
+          <p class="usecase-desc">Scan for emerging trends weekly across search, news, and social — surface opportunities.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: weekly intel</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a trend tracking agent.</span>
+Niche: <span class="ph-key">[NICHE]</span>
+Sources: <span class="ph-key">[X, Google Trends, news search]</span>
+Cadence: every Monday at 9 AM.
+
+Steps:
+1. Pull trending topics across sources.
+2. Filter for relevance to my niche.
+3. Rank by signal strength.
+4. Output a clean PDF report with the top 5 trends and suggested actions.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Financial statement analysis</h4>
+          <p class="usecase-desc">Compute key ratios from financial statements — profitability, liquidity, leverage — for an investment thesis.</p>
+          <div class="usecase-meta"><span class="price-tag">~$12 / report</span><span class="price-tag cost">deliverable value: $150–$600</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Build a financial analysis.</span>
+Company: <span class="ph-key">[COMPANY]</span>
+Data: <span class="ph-key">[paste income statement + balance sheet]</span>
+Timeframe: <span class="ph-key">[YEARS]</span>
+
+Output: profitability ratios (gross margin, net margin), liquidity ratios (current, quick), leverage ratios (debt-to-equity), efficiency ratios (inventory turnover), plus a 1-page investment thesis.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Due diligence report</h4>
+          <p class="usecase-desc">Compile a structured due-diligence report from public sources for a target company.</p>
+          <div class="usecase-meta"><span class="price-tag">~$20 / report</span><span class="price-tag cost">deliverable value: $400–$1500</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a due diligence report.</span>
+Target: <span class="ph-key">[COMPANY NAME]</span>
+Sources: <span class="ph-key">[URLs]</span>
+Output: clean PDF report covering market, product, financials, team, risks, and recommendation.
+
+Steps:
+1. Scrape each URL using the browser tool.
+2. Extract relevant facts per category.
+3. Flag any red flags.
+4. Output as a downloadable PDF report.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ============ CATEGORY 08 — ECOMMERCE ============ -->
+    <article class="cat-card">
+      <div class="cat-head" onclick="toggleCat(this)">
+        <div class="cat-num">08</div>
+        <div class="cat-title"><h3>E-commerce</h3><p>Product descriptions, listing optimization, inventory sync, customer support replies.</p></div>
+        <div class="cat-meta"><span class="count">5 uses</span><span><b>$0</b> start</span></div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="cat-body">
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Shopify listing optimization</h4>
+          <p class="usecase-desc">Rewrite product titles, descriptions, and tags for SEO across your whole Shopify store.</p>
+          <div class="usecase-meta"><span class="price-tag">~$1.5 / product</span><span class="price-tag cost">deliverable value: $5–$15 each</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a Shopify listing optimizer agent.</span>
+Connector: <span class="ph-key">[Shopify]</span>
+Cadence: every night at midnight UTC.
+Optimization: titles, descriptions, and tags for SEO.
+
+Steps:
+1. Pull all products from Shopify.
+2. Rewrite titles and descriptions for each.
+3. Update tags based on search volume.
+4. Write back to Shopify.
+5. Send me a summary every morning.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Customer support reply generator</h4>
+          <p class="usecase-desc">Draft replies to incoming support tickets based on order history and product knowledge.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: hours saved per week</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a customer support reply agent.</span>
+Connector: <span class="ph-key">[Gmail]</span>
+Trigger: every new support email.
+Output: a draft reply ready to send.
+
+Steps:
+1. Read incoming support emails.
+2. Pull order history for the customer.
+3. Draft a reply referencing the order.
+4. Send it to me with an approval gate before sending.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Inventory sync agent</h4>
+          <p class="usecase-desc">Sync inventory levels across Shopify and Google Sheets hourly.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: $200–$800/mo saved</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build an inventory sync agent.</span>
+Connectors: <span class="ph-key">[Shopify, Google Sheets]</span>
+Cadence: hourly.
+
+Steps:
+1. Pull current stock levels from Shopify.
+2. Write them to Google Sheets.
+3. Flag any discrepancies between the two systems.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Product description writer</h4>
+          <p class="usecase-desc">Bulk-write descriptions for a new product launch.</p>
+          <div class="usecase-meta"><span class="price-tag">~$2 / product</span><span class="price-tag cost">deliverable value: $5–$15 each</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Write product descriptions.</span>
+Products (paste list): <span class="ph-key">[PRODUCT NAMES]</span>
+Brand voice: <span class="ph-key">[premium / playful / minimal]</span>
+Output: clean table with title, description, and bullet benefits per product.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Refund processing agent</h4>
+          <p class="usecase-desc">Process refunds and issue refunds based on rules — never send a refund without my approval gate.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: hours saved per week</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a refund processing agent.</span>
+Connector: <span class="ph-key">[Shopify]</span>
+Rules: <span class="ph-key">[refund policy here]</span>
+Output: a draft refund ready to approve.
+
+Steps:
+1. Read new refund requests.
+2. Apply policy to decide whether to issue a refund.
+3. Send me an approval gate before issuing anything.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ============ CATEGORY 09 — EMAIL & COMMUNICATION ============ -->
+    <article class="cat-card">
+      <div class="cat-head" onclick="toggleCat(this)">
+        <div class="cat-num">09</div>
+        <div class="cat-title"><h3>Email & Communication</h3><p>Gmail connector reads, drafts, schedules, and sends — fully automated.</p></div>
+        <div class="cat-meta"><span class="count">5 uses</span><span><b>$0</b> start</span></div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="cat-body">
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Cold outreach campaign</h4>
+          <p class="usecase-desc">Send personalized cold emails to a list of prospects via Gmail, with follow-ups.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0.05 / email</span><span class="price-tag cost">deliverable value: $200–$1500 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a cold outreach campaign.</span>
+Connector: <span class="ph-key">[Gmail]</span>
+Cadence: <span class="ph-key">[send 50 emails/day]</span>
+Output: clean tracking sheet.
+
+Steps:
+1. Read leads from Google Sheets.
+2. Personalize each email using firmographics.
+3. Send via Gmail connector.
+4. Track opens and replies in the same sheet.
+5. Send follow-ups automatically based on the original template.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Email triage agent</h4>
+          <p class="usecase-desc">Sort incoming emails into folders and reply to routine ones automatically.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: hours saved per week</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build an email triage agent.</span>
+Connector: <span class="ph-key">[Gmail]</span>
+Rules: <span class="ph-key">[urgent / today / this week / ignore]</span>
+Output: emails sorted into folders with summaries.
+
+Steps:
+1. Read incoming emails.
+2. Sort by urgency per my rules.
+3. Auto-reply to routine emails based on templates I provide.
+4. Send me a daily summary at 8 AM.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Newsletter generator</h4>
+          <p class="usecase-desc">Generate a weekly newsletter from recent posts across your channels.</p>
+          <div class="usecase-meta"><span class="price-tag">~$10 / week</span><span class="price-tag cost">deliverable value: $300–$1500/mo retainer</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a newsletter generator agent.</span>
+Cadence: weekly.
+Output: clean email sent via Gmail.
+
+Steps:
+1. Pull recent posts from X, YouTube, and Discord.
+2. Compile into a single newsletter template.
+3. Send via Gmail connector.
+4. Track opens and clicks over time.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Email signature generator</h4>
+          <p class="usecase-desc">Generate consistent email signatures across a team.</p>
+          <div class="usecase-meta"><span class="price-tag">~$1 / signature</span><span class="price-tag cost">deliverable value: $20–$80 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Build a team email signature generator.</span>
+Team members: <span class="ph-key">[paste names + roles]</span>
+Style: minimal black-and-white template.
+Output: clean HTML ready to paste into Gmail.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Meeting notes writer</h4>
+          <p class="usecase-desc">Transcribe a meeting recording into a structured summary with action items.</p>
+          <div class="usecase-meta"><span class="price-tag">~$5 / meeting</span><span class="price-tag cost">deliverable value: $40–$150</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>speech-to-text</span></div>
+            <div class="prompt"><span class="action">Transcribe this meeting.</span>
+Audio file: <span class="ph-key">[attach file]</span>
+Output: structured meeting notes with timestamps.
+
+Steps:
+1. Transcribe audio.
+2. Group into agenda items.
+3. Pull out action items with owners.
+4. Output as clean Markdown ready to send via email.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ============ CATEGORY 10 — SOCIAL MEDIA ============ -->
+    <article class="cat-card">
+      <div class="cat-head" onclick="toggleCat(this)">
+        <div class="cat-num">10</div>
+        <div class="cat-title"><h3>Social Media Management</h3><p>X, YouTube, Discord — fully wired, scheduled, and tracked.</p></div>
+        <div class="cat-meta"><span class="count">5 uses</span><span><b>$0</b> start</span></div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="cat-body">
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>X content engine</h4>
+          <p class="usecase-desc">Generate and post high-engagement tweets every 2 hours with anti-shadowban rotation.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 setup</span><span class="price-tag cost">deliverable value: $500–$2000 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build an X content engine.</span>
+Connector: <span class="ph-key">[X]</span>
+Cadence: every 2 hours.
+Format: <span class="ph-key">[single / thread / short_thread]</span>
+Style: <span class="ph-key">[BRAND VOICE]</span>
+
+Steps:
+1. Generate tweets matching brand voice.
+2. Apply humanizer pass to defeat AI detection.
+3. Post via X connector.
+4. Track impressions per tweet over time.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>YouTube Shorts automation</h4>
+          <p class="usecase-desc">Generate and post daily shorts automatically using the YouTube connector.</p>
+          <div class="usecase-meta"><span class="price-tag">~$60 / short</span><span class="price-tag cost">deliverable value: $200–$800 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a YouTube Shorts automation agent.</span>
+Connector: <span class="ph-key">[YouTube]</span>
+Cadence: every day at 11 AM UTC.
+Output: clean shorts uploaded to YouTube.
+
+Steps:
+1. Generate a script per day.
+2. Generate Veo clips per scene.
+3. Stitch with ffmpeg.
+4. Upload to YouTube Shorts.
+5. Send me a summary every morning.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Discord community manager</h4>
+          <p class="usecase-desc">Build a Discord bot with FAQs, welcome messages, and engagement tracking.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 setup</span><span class="price-tag cost">deliverable value: $800–$3000 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a Discord community manager.</span>
+Connector: <span class="ph-key">[Discord]</span>
+Server ID: <span class="ph-key">[ID]</span>
+Features: <span class="ph-key">[welcome message, FAQ engine, point tracking]</span>
+
+Steps:
+1. Welcome new members automatically.
+2. Reply to FAQs in the dedicated channel.
+3. Track engagement points per member.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Social media scheduling agent</h4>
+          <p class="usecase-desc">Schedule a full week of posts across X, YouTube, and Discord.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 setup</span><span class="price-tag cost">deliverable value: $300–$1500/mo retainer</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a social media scheduling agent.</span>
+Platforms: <span class="ph-key">[X, YouTube, Discord]</span>
+Cadence: weekly.
+Output: full week of posts queued up.
+
+Steps:
+1. Write posts for each platform.
+2. Schedule them on their respective cadences.
+3. Send me a summary every morning.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>X account health check</h4>
+          <p class="usecase-desc">Detect shadow bans, search bans, and reply deboosting across an X account.</p>
+          <div class="usecase-meta"><span class="price-tag">~$5 / check</span><span class="price-tag cost">deliverable value: $50–$150 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build an X account health check.</span>
+Account: <span class="ph-key">[@HANDLE]</span>
+Output: clean PDF report covering:
+- search suggestion ban detection
+- search ban detection
+- ghost ban detection
+- reply deboosting detection
+- engagement rate per recent post
+- overall health score (0-100)
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ============ CATEGORY 11 — DATA & PRODUCTIVITY ============ -->
+    <article class="cat-card">
+      <div class="cat-head" onclick="toggleCat(this)">
+        <div class="cat-num">11</div>
+        <div class="cat-title"><h3>Data & Productivity</h3><p>Google Sheets, Notion, Asana, Linear — read, write, sync, and report.</p></div>
+        <div class="cat-meta"><span class="count">5 uses</span><span><b>$0</b> start</span></div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="cat-body">
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Google Sheets automation agent</h4>
+          <p class="usecase-desc">Read, transform, and write rows back to Sheets on a schedule.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: hours saved per week</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a Google Sheets automation agent.</span>
+Sheet ID: <span class="ph-key">[ID]</span>
+Action: <span class="ph-key">[transform rows based on rules]</span>
+Cadence: <span class="ph-key">[hourly]</span>
+
+Steps:
+1. Read input rows from Sheets.
+2. Apply transformations based on rules I provide.
+3. Write back to the same sheet.
+4. Send me a summary every morning.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Notion database manager</h4>
+          <p class="usecase-desc">Automate Notion pages and database entries based on triggers.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: hours saved per week</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a Notion automation agent.</span>
+Connector: <span class="ph-key">[Notion]</span>
+Trigger: <span class="ph-key">[when a new email arrives]</span>
+Action: <span class="ph-key">[create a new page in a specific database]</span>
+
+Steps:
+1. Watch for new emails matching the criteria.
+2. Create a new page in the target Notion database with relevant fields.
+3. Send me a daily summary.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Task management — Asana / Linear</h4>
+          <p class="usecase-desc">Create tasks automatically based on incoming emails or messages.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: hours saved per week</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build an Asana task agent.</span>
+Connector: <span class="ph-key">[Gmail, Asana]</span>
+Trigger: when a new email arrives with subject line containing "TASK:".
+
+Steps:
+1. Parse the email body for the task.
+2. Create a task in the target Asana project.
+3. Assign owner based on keyword matching.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Data cleaning agent</h4>
+          <p class="usecase-desc">Clean a messy CSV file — remove duplicates, normalize dates, fill blanks.</p>
+          <div class="usecase-meta"><span class="price-tag">~$5 / file</span><span class="price-tag cost">deliverable value: $50–$200</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Clean this CSV file.</span>
+File: <span class="ph-key">[attach file]</span>
+Actions:
+- Remove duplicates.
+- Normalize all date columns to YYYY-MM-DD.
+- Standardize phone numbers.
+- Fill missing values with sensible defaults.
+- Output the cleaned file back to my workspace.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Weekly report generator</h4>
+          <p class="usecase-desc">Pull data from multiple sources, build a single-page report, send via email.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: $300–$1500/mo saved</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a weekly report generator.</span>
+Connectors: <span class="ph-key">[Analytics, Search Console, Sheets]</span>
+Cadence: every Friday at 4 PM.
+Output: clean PDF report.
+
+Steps:
+1. Pull the relevant metrics from each connector.
+2. Build a single-page PDF report.
+3. Email it to me and my team.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ============ CATEGORY 12 — VOICE & AUDIO ============ -->
+    <article class="cat-card">
+      <div class="cat-head" onclick="toggleCat(this)">
+        <div class="cat-num">12</div>
+        <div class="cat-title"><h3>Voice & Audio</h3><p>Text-to-speech in 20+ voices, speech-to-text transcription, voiceovers for videos.</p></div>
+        <div class="cat-meta"><span class="count">5 uses</span><span><b>$0</b> start</span></div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="cat-body">
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Podcast voiceover generator</h4>
+          <p class="usecase-desc">Generate a full podcast episode audio file from a script using one of 20+ voices.</p>
+          <div class="usecase-meta"><span class="price-tag">~$3 / episode</span><span class="price-tag cost">deliverable value: $150–$500 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>text-to-speech</span></div>
+            <div class="prompt"><span class="action">Generate a voiceover.</span>
+Script: <span class="ph-key">[paste script]</span>
+Voice: <span class="ph-key">[Kore / Charon / Aoede]</span>
+Mood tags: <span class="ph-key">[enthusiasm] [short pause] [excitement]</span>
+Output: clean MP3 audio file ready to upload to YouTube or Spotify.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Meeting transcription</h4>
+          <p class="usecase-desc">Transcribe audio/video files into structured notes.</p>
+          <div class="usecase-meta"><span class="price-tag">~$2 / meeting</span><span class="price-tag cost">deliverable value: $30–$120</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>speech-to-text</span></div>
+            <div class="prompt"><span class="action">Transcribe this audio file.</span>
+File: <span class="ph-key">[attach file]</span>
+Language: <span class="ph-key">[en]</span>
+Output: clean Markdown transcript with timestamps.
+
+Steps:
+1. Transcribe the audio file.
+2. Format as clean text with timestamps.
+3. Group into agenda items.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Video narration</h4>
+          <p class="usecase-desc">Generate a voiceover for a generated video clip.</p>
+          <div class="usecase-meta"><span class="price-tag">~$1 / clip</span><span class="price-tag cost">deliverable value: included in video pipeline</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>text-to-speech</span></div>
+            <div class="prompt"><span class="action">Generate a voiceover for this video clip.</span>
+Script: <span class="ph-key">[paste script]</span>
+Voice: <span class="ph-key">[Puck]</span>
+Style: <span class="ph-key">[upbeat, energetic]</span>
+Output: clean MP3 audio file ready to overlay onto the video with ffmpeg.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Audiobook narration</h4>
+          <p class="usecase-desc">Generate a full audiobook chapter from a written piece.</p>
+          <div class="usecase-meta"><span class="price-tag">~$5 / chapter</span><span class="price-tag cost">deliverable value: $150–$500 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>text-to-speech</span></div>
+            <div class="prompt"><span class="action">Generate an audiobook chapter.</span>
+Text: <span class="ph-key">[paste chapter text]</span>
+Voice: <span class="ph-key">[Aoede]</span>
+Style: <span class="ph-key">[warm, professional tone]</span>
+Output: clean MP3 audio file ready to upload to a podcast platform or Audible.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Podcast intro/outro</h4>
+          <p class="usecase-desc">Generate a professional intro/outro voiceover for a podcast.</p>
+          <div class="usecase-meta"><span class="price-tag">~$1 / voiceover</span><span class="price-tag cost">deliverable value: $20–$80 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>text-to-speech</span></div>
+            <div class="prompt"><span class="action">Generate a podcast intro.</span>
+Show name: <span class="ph-key">[NAME]</span>
+Tone: <span class="ph-key">[enthusiasm] [excitement] Welcome back to the show!</span>
+Voice: <span class="ph-key">[Puck]</span>
+Output: clean MP3 file ready to drop into every episode.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ============ CATEGORY 13 — DISCORD & TELEGRAM BOTS ============ -->
+    <article class="cat-card">
+      <div class="cat-head" onclick="toggleCat(this)">
+        <div class="cat-num">13</div>
+        <div class="cat-title"><h3>Discord & Telegram Bots</h3><p>Build community bots for Discord and Telegram — welcome, FAQ, engagement, moderation, alerts.</p></div>
+        <div class="cat-meta"><span class="count">6 uses</span><span><b>$0</b> start</span></div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="cat-body">
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Discord welcome & FAQ bot</h4>
+          <p class="usecase-desc">A Discord bot that welcomes new members, answers FAQs in a dedicated channel, and reacts to GM/GN.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 setup</span><span class="price-tag cost">deliverable value: $800–$3000 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a Discord welcome & FAQ bot.</span>
+Connector: <span class="ph-key">[Discord]</span>
+Server ID: <span class="ph-key">[ID]</span>
+FAQ channel ID: <span class="ph-key">[ID]</span>
+
+Features:
+1. Welcome new members with a custom message.
+2. Auto-reply to FAQs only in the dedicated FAQ channel.
+3. React to GM/GN messages with a custom emoji and track streaks.
+4. Only respond to @mentions elsewhere — never spam.
+5. Send me a weekly engagement summary.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Discord engagement points & leaderboard</h4>
+          <p class="usecase-desc">Track X engagement (likes/comments/RTs) and award points; post a weekly leaderboard.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 setup</span><span class="price-tag cost">deliverable value: $500–$2000 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a Discord engagement leaderboard bot.</span>
+Connector: <span class="ph-key">[Discord, X]</span>
+Server ID: <span class="ph-key">[ID]</span>
+
+Scoring: like=1pt, comment=2pt, RT=3pt.
+1. Track members’ engagement on linked X accounts.
+2. Maintain a SQLite leaderboard.
+3. Post the weekly top 10 every Sunday at 8 PM UTC.
+4. Add /leaderboard and /points slash commands.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Discord moderation bot</h4>
+          <p class="usecase-desc">Auto-detect spam/promo messages, mute offenders, file reports, and process appeals via slash commands.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 setup</span><span class="price-tag cost">deliverable value: $600–$2500 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a Discord moderation bot.</span>
+Connector: <span class="ph-key">[Discord]</span>
+Server ID: <span class="ph-key">[ID]</span>
+Admin role ID: <span class="ph-key">[ID]</span>
+
+Features:
+1. Detect spam and promo patterns; auto-delete and warn.
+2. Mute/ban via moderator slash commands.
+3. Auto-silence ticket/support/appeal channels except on @mention.
+4. Log every action to a moderation log channel.
+5. /silence, /unsilence, /silenced commands (mod-only).
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Telegram broadcast & support bot</h4>
+          <p class="usecase-desc">A Telegram bot that broadcasts updates, forwards media, answers FAQs, and routes support questions.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 setup</span><span class="price-tag cost">deliverable value: $700–$2500 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a Telegram broadcast & support bot.</span>
+Connector: <span class="ph-key">[Telegram]</span>
+Bot token: <span class="ph-key">[TOKEN]</span>
+
+Features:
+1. Send and read messages in chats and channels.
+2. Forward media attachments and edits.
+3. Answer FAQs automatically when a question matches the knowledge base.
+4. Route support questions to a private admin group.
+5. Send a daily digest of activity at 9 AM UTC.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Telegram invite & onboarding bot</h4>
+          <p class="usecase-desc">Generate invite links, onboarding new members with a guided welcome flow and pinned resources.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 setup</span><span class="price-tag cost">deliverable value: $400–$1500 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a Telegram onboarding bot.</span>
+Connector: <span class="ph-key">[Telegram]</span>
+
+Features:
+1. Generate single-use invite links on demand.
+2. Send a 3-step welcome flow to each new member.
+3. Pin a resources message with links to docs.
+4. Track how many members complete onboarding.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Discord promo delivery bot</h4>
+          <p class="usecase-desc">Deliver scheduled daily product promos to a Discord channel with rich embeds and role pings.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 setup</span><span class="price-tag cost">deliverable value: $300–$1200 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a Discord promo delivery bot.</span>
+Connector: <span class="ph-key">[Discord]</span>
+Webhook URL: <span class="ph-key">[WEBHOOK]</span>
+Ping role: <span class="ph-key">[ROLE ID]</span>
+Cadence: daily at 10 AM UTC.
+
+Steps:
+1. Generate a product promo (hook + 3 benefits + CTA).
+2. Build a color-coded rich embed.
+3. Send it via sendMessageAdvanced with the role ping.
+4. Log delivery status to a tracking sheet.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ============ CATEGORY 14 — LOGO & GRAPHIC DESIGN ============ -->
+    <article class="cat-card">
+      <div class="cat-head" onclick="toggleCat(this)">
+        <div class="cat-num">14</div>
+        <div class="cat-title"><h3>Logo & Graphic Design</h3><p>Design logos, brand marks, social graphics, motion graphics, and full brand identity systems.</p></div>
+        <div class="cat-meta"><span class="count">7 uses</span><span><b>$0</b> start</span></div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="cat-body">
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Logo design (full identity)</h4>
+          <p class="usecase-desc">Generate a complete logo system: primary mark, monogram, and lockup variations in black and white.</p>
+          <div class="usecase-meta"><span class="price-tag">~$12 / logo</span><span class="price-tag cost">deliverable value: $150–$800</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>image generation</span></div>
+            <div class="prompt"><span class="action">Generate a logo system.</span>
+Brand name: <span class="ph-key">[NAME]</span>
+Industry: <span class="ph-key">[INDUSTRY]</span>
+Style: <span class="ph-key">[geometric mark / wordmark / monogram / abstract]</span>
+Vibe: <span class="ph-key">[premium / technical / playful / minimal]</span>
+Colors: black and white only.
+
+Output 4 variations:
+1. Primary logo (full lockup).
+2. Monogram (just the mark).
+3. Stacked version.
+4. White-on-black inverted version.
+All on clean white background, centered, scalable look.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Social media graphic designer</h4>
+          <p class="usecase-desc">Generate a week of branded social graphics — quotes, tips, announcement posts — in one consistent style.</p>
+          <div class="usecase-meta"><span class="price-tag">~$25 / week</span><span class="price-tag cost">deliverable value: $200–$600</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a social graphic designer agent.</span>
+Brand: <span class="ph-key">[NAME]</span>
+Niche: <span class="ph-key">[NICHE]</span>
+Style: black and white, bold typography, minimal.
+Cadence: every morning at 7 AM.
+
+Steps:
+1. Pick a quote, tip, or question of the day.
+2. Generate a square (1:1) graphic.
+3. Generate a vertical (9:16) version for Stories.
+4. Save both to my workspace.
+5. Send me the files for approval before posting.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Motion graphic logo reveal</h4>
+          <p class="usecase-desc">Animate a brand logo with a cinematic reveal — Dark Luxury, Dramatic mood, 16:9, 8 seconds.</p>
+          <div class="usecase-meta"><span class="price-tag">~$30 / reveal</span><span class="price-tag cost">deliverable value: $300–$1200</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>video generation</span></div>
+            <div class="prompt"><span class="action">Generate a cinematic logo reveal.</span>
+Logo: <span class="ph-key">[attach logo image]</span>
+Style: Dark Luxury, Dramatic mood.
+Aspect ratio: 16:9.
+Duration: 8 seconds.
+Mood: premium, confident, restrained.
+
+Start from a black frame, the logo emerges through light and shadow, settles centered, end on the tagline: <span class="ph-key">[TAGLINE]</span>.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Brand identity guide</h4>
+          <p class="usecase-desc">Generate a complete brand identity PDF — colors, typography, logo usage, voice, sample applications.</p>
+          <div class="usecase-meta"><span class="price-tag">~$20 / guide</span><span class="price-tag cost">deliverable value: $400–$1500</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Build a brand identity guide.</span>
+Brand: <span class="ph-key">[NAME]</span>
+Industry: <span class="ph-key">[INDUSTRY]</span>
+Vibe: <span class="ph-key">[premium / playful / technical]</span>
+
+Output a clean PDF guide covering:
+1. Brand story (3 sentences).
+2. Logo usage rules (clear space, sizing, do/don’t).
+3. Color palette (primary, secondary, neutrals).
+4. Typography (headings, body, accents).
+5. Voice and tone rules.
+6. Sample applications (business card, social post, signage).
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Pitch deck designer</h4>
+          <p class="usecase-desc">Generate a 10-slide pitch deck with bold black-and-white layouts, ready to present.</p>
+          <div class="usecase-meta"><span class="price-tag">~$40 / deck</span><span class="price-tag cost">deliverable value: $500–$2000</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Build a 10-slide pitch deck.</span>
+Company: <span class="ph-key">[NAME]</span>
+Problem: <span class="ph-key">[PROBLEM]</span>
+Solution: <span class="ph-key">[SOLUTION]</span>
+Market: <span class="ph-key">[TAM]</span>
+Traction: <span class="ph-key">[METRICS]</span>
+Ask: <span class="ph-key">[ASK]</span>
+
+Output a clean HTML pitch deck with:
+1. Cover 2. Problem 3. Solution 4. Demo 5. Market 6. Business model 7. Traction 8. Team 9. Roadmap 10. Ask.
+Black and white, bold typography, one idea per slide.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Infographic generator</h4>
+          <p class="usecase-desc">Turn data into a clean, shareable infographic with bold icons and clear hierarchy.</p>
+          <div class="usecase-meta"><span class="price-tag">~$10 / infographic</span><span class="price-tag cost">deliverable value: $100–$400</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>image generation</span></div>
+            <div class="prompt"><span class="action">Generate an infographic.</span>
+Topic: <span class="ph-key">[TOPIC]</span>
+Data: <span class="ph-key">[paste stats]</span>
+Style: clean line icons, minimal, white background, bold numbers.
+Format: 1080×1080.
+Layout: title at top, 4 stat blocks in a grid, source line at bottom.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Brand color & font pairing</h4>
+          <p class="usecase-desc">Recommend a complete color and typography system that matches a brand’s vibe.</p>
+          <div class="usecase-meta"><span class="price-tag">~$5 / system</span><span class="price-tag cost">deliverable value: $80–$300</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Recommend a brand system.</span>
+Brand: <span class="ph-key">[NAME]</span>
+Vibe: <span class="ph-key">[premium / playful / technical]</span>
+
+Output: primary, secondary, and neutral colors (with hex); heading font, body font, and accent font (with Google Fonts names); 3 sample combinations; usage rules.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ============ CATEGORY 15 — WEBSITE & LANDING PAGE BUILDER ============ -->
+    <article class="cat-card">
+      <div class="cat-head" onclick="toggleCat(this)">
+        <div class="cat-num">15</div>
+        <div class="cat-title"><h3>Website & Landing Page Builder</h3><p>Generate standalone HTML pages, dashboards, forms, and interactive widgets from a description.</p></div>
+        <div class="cat-meta"><span class="count">6 uses</span><span><b>$0</b> start</span></div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="cat-body">
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Landing page generator</h4>
+          <p class="usecase-desc">Generate a complete single-file HTML landing page — hero, features, pricing, CTA — ready to deploy.</p>
+          <div class="usecase-meta"><span class="price-tag">~$15 / page</span><span class="price-tag cost">deliverable value: $300–$1500</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Build a landing page.</span>
+Product: <span class="ph-key">[PRODUCT]</span>
+Tagline: <span class="ph-key">[TAGLINE]</span>
+Audience: <span class="ph-key">[WHO]</span>
+Color scheme: <span class="ph-key">[black and white]</span>
+Sections: hero, features, pricing, testimonials, FAQ, footer CTA.
+
+Output a single-file HTML page with inline CSS and JS, ready to deploy to Vercel.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Interactive dashboard</h4>
+          <p class="usecase-desc">Generate a data dashboard with charts, cards, and tables from your data.</p>
+          <div class="usecase-meta"><span class="price-tag">~$20 / dashboard</span><span class="price-tag cost">deliverable value: $400–$1500</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Build an interactive dashboard.</span>
+Data: <span class="ph-key">[paste data or describe source]</span>
+Metrics to show: <span class="ph-key">[KPI list]</span>
+Charts needed: <span class="ph-key">[line, bar, donut]</span>
+
+Output a single-file HTML dashboard with cards, charts (use Chart.js), and a responsive grid. Black and white theme.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Lead capture form</h4>
+          <p class="usecase-desc">Generate a form that captures leads and writes them to a Google Sheet.</p>
+          <div class="usecase-meta"><span class="price-tag">~$10 / form</span><span class="price-tag cost">deliverable value: $100–$400</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a lead capture form agent.</span>
+Connector: <span class="ph-key">[Google Sheets]</span>
+Fields: name, email, company, message.
+
+Steps:
+1. Generate an HTML form.
+2. On submit, write a new row to Google Sheets.
+3. Send me an email alert for each new lead.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Portfolio website</h4>
+          <p class="usecase-desc">Generate a personal portfolio site — bio, projects, contact — in one HTML file.</p>
+          <div class="usecase-meta"><span class="price-tag">~$15 / site</span><span class="price-tag cost">deliverable value: $300–$1000</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Build a portfolio website.</span>
+Name: <span class="ph-key">[NAME]</span>
+Role: <span class="ph-key">[ROLE]</span>
+Projects: <span class="ph-key">[paste 3-6 projects]</span>
+Style: minimal black and white.
+
+Output a single-file HTML portfolio with hero, project grid, about, and contact sections.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Interactive widget / mini-app</h4>
+          <p class="usecase-desc">Generate a standalone interactive widget (calculator, quiz, configurator) in one HTML file.</p>
+          <div class="usecase-meta"><span class="price-tag">~$12 / widget</span><span class="price-tag cost">deliverable value: $150–$600</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Build an interactive widget.</span>
+Type: <span class="ph-key">[calculator / quiz / pricing configurator]</span>
+Inputs: <span class="ph-key">[LIST]</span>
+Output: <span class="ph-key">[WHAT IT COMPUTES]</span>
+
+Output a single-file HTML widget with inline CSS and JS, no external dependencies.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Deploy to Vercel guide</h4>
+          <p class="usecase-desc">Generate the full deployment package: index.html, vercel.json, README with deploy steps.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0</span><span class="price-tag cost">deliverable value: included</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Package this page for deployment.</span>
+Output three files:
+1. index.html (the page itself).
+2. vercel.json (static site config, clean URLs).
+3. README.md (deploy steps: GitHub repo create, push, Vercel import, leave build settings empty, deploy).
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ============ CATEGORY 16 — BROWSER AUTOMATION ============ -->
+    <article class="cat-card">
+      <div class="cat-head" onclick="toggleCat(this)">
+        <div class="cat-num">16</div>
+        <div class="cat-title"><h3>Browser Automation</h3><p>Give agents a real browser — log into services, navigate UIs, fill forms, extract live data.</p></div>
+        <div class="cat-meta"><span class="count">5 uses</span><span><b>$0</b> start</span></div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="cat-body">
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Web scraping & extraction</h4>
+          <p class="usecase-desc">Scrape and extract structured data from any URL — products, listings, articles — via Firecrawl.</p>
+          <div class="usecase-meta"><span class="price-tag">~$5 / scrape</span><span class="price-tag cost">deliverable value: $50–$250</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a web scraping agent.</span>
+URLs: <span class="ph-key">[URL LIST]</span>
+Fields to extract: <span class="ph-key">[title, price, image, link]</span>
+Output: clean CSV saved to my workspace.
+
+Steps:
+1. Scrape each URL using the Firecrawl connector.
+2. Extract the requested fields.
+3. Output as a CSV file.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Logged-in account automation</h4>
+          <p class="usecase-desc">Log into a personal account (LinkedIn, Instagram, X) and perform actions on your behalf.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: hours saved per week</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a logged-in browser automation agent.</span>
+Service: <span class="ph-key">[LinkedIn / Instagram / X]</span>
+Profile: <span class="ph-key">[browser-use profile ID]</span>
+Action: <span class="ph-key">[WHAT TO DO]</span>
+
+Steps:
+1. Create a browser session with the profile.
+2. Navigate to the login page.
+3. Pause and ask me to log in once.
+4. Save the persistent session.
+5. Run the task on the authenticated session.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Form filler & submitter</h4>
+          <p class="usecase-desc">Auto-fill and submit forms on websites — job applications, lead forms, registrations.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: hours saved per week</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a form-filler agent.</span>
+Target URL: <span class="ph-key">[URL]</span>
+My data: <span class="ph-key">[name, email, phone, resume link]</span>
+
+Steps:
+1. Open the URL in a browser session.
+2. Map fields to my data.
+3. Fill the form.
+4. Pause for my approval before submitting.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Site crawler</h4>
+          <p class="usecase-desc">Crawl an entire site and extract every page into structured Markdown.</p>
+          <div class="usecase-meta"><span class="price-tag">~$10 / site</span><span class="price-tag cost">deliverable value: $100–$400</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Crawl this entire site.</span>
+Root URL: <span class="ph-key">[URL]</span>
+Max pages: <span class="ph-key">[100]</span>
+Output: a ZIP of Markdown files, one per page, organized by URL path.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Live data monitor</h4>
+          <p class="usecase-desc">Watch a page for changes (price, availability, content) and alert you instantly.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: $100–$500 setup</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a page-change monitor.</span>
+URL: <span class="ph-key">[URL]</span>
+Selector: <span class="ph-key">[CSS SELECTOR or description]</span>
+Cadence: every 30 minutes.
+
+Steps:
+1. Scrape the page.
+2. Compare the watched value to the last run.
+3. If changed, send me an alert via Discord.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ============ CATEGORY 17 — FINANCE & TRADING ============ -->
+    <article class="cat-card">
+      <div class="cat-head" onclick="toggleCat(this)">
+        <div class="cat-num">17</div>
+        <div class="cat-title"><h3>Finance & Trading</h3><p>Stock/crypto analysis, trading bots with risk controls, financial modeling, portfolio reports.</p></div>
+        <div class="cat-meta"><span class="count">5 uses</span><span><b>$0</b> start</span></div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="cat-body">
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Stock/crypto analysis agent</h4>
+          <p class="usecase-desc">Pull price, market cap, and sentiment for a ticker, output a buy/hold/sell recommendation.</p>
+          <div class="usecase-meta"><span class="price-tag">~$5 / report</span><span class="price-tag cost">deliverable value: $50–$200</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a stock/crypto analysis agent.</span>
+Ticker: <span class="ph-key">[TICKER]</span>
+Time period: <span class="ph-key">[1D / 1W / 1M / 1Y]</span>
+Output: clean PDF report with current price, % change, market cap, sentiment score, and a recommendation.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Algorithmic trading bot</h4>
+          <p class="usecase-desc">Run a trading bot against a crypto exchange on a schedule with TP/SL and daily loss caps.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: live trading P&L</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build an algo trading bot.</span>
+Exchange: <span class="ph-key">[WEEX]</span>
+Pair: <span class="ph-key">[BTCUSDT, ETHUSDT]</span>
+Direction: <span class="ph-key">[long / short / both]</span>
+Risk per trade: <span class="ph-key">[X%]</span>
+Daily loss cap: <span class="ph-key">[X%]</span>
+TP multiplier: <span class="ph-key">[2.5x ATR]</span>
+Cadence: every 2 hours.
+
+Steps:
+1. Pull price and ATR.
+2. Check entry signals.
+3. Place order with TP/SL.
+4. Send Discord notification per trade.
+5. Stop trading if daily loss cap is hit.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>DCF & financial modeling</h4>
+          <p class="usecase-desc">Build a discounted cash flow model with sensitivity testing and scenario planning.</p>
+          <div class="usecase-meta"><span class="price-tag">~$15 / model</span><span class="price-tag cost">deliverable value: $200–$800</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Build a DCF model.</span>
+Company: <span class="ph-key">[NAME]</span>
+Revenue, margins, growth: <span class="ph-key">[paste assumptions]</span>
+Discount rate: <span class="ph-key">[X%]</span>
+
+Output: clean Excel model with DCF valuation, sensitivity table, and 3 scenarios (base, bull, bear).
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Portfolio rebalancing agent</h4>
+          <p class="usecase-desc">Review your holdings weekly, check drift from target allocation, suggest rebalancing trades.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: hours saved per week</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a portfolio rebalancing agent.</span>
+Holdings: <span class="ph-key">[paste holdings]</span>
+Target allocation: <span class="ph-key">[paste target %]</span>
+Cadence: weekly.
+
+Steps:
+1. Pull current prices.
+2. Compute current allocation.
+3. Flag any drift greater than 5%.
+4. Suggest rebalancing trades.
+5. Email me the report.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Crypto market scanner</h4>
+          <p class="usecase-desc">Scan top movers hourly, surface coins with unusual volume or momentum.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: trading signal feed</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a crypto market scanner.</span>
+Cadence: hourly.
+Output: top 5 movers with momentum score.
+
+Steps:
+1. Pull top 100 coins by volume.
+2. Compute momentum over the last 24 hours.
+3. Surface the top 5 with unusual volume.
+4. Send a Discord alert.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ============ CATEGORY 18 — SPECIALIZED INDUSTRIES ============ -->
+    <article class="cat-card">
+      <div class="cat-head" onclick="toggleCat(this)">
+        <div class="cat-num">18</div>
+        <div class="cat-title"><h3>Specialized Industries</h3><p>Real estate, recruitment, education, legal, healthcare, HR — domain-specific agents.</p></div>
+        <div class="cat-meta"><span class="count">8 uses</span><span><b>$0</b> start</span></div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="cat-body">
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Real estate listing generator</h4>
+          <p class="usecase-desc">Turn property photos and specs into a polished listing description ready for Zillow or Realtor.com.</p>
+          <div class="usecase-meta"><span class="price-tag">~$5 / listing</span><span class="price-tag cost">deliverable value: $40–$150</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Write a real estate listing.</span>
+Property: <span class="ph-key">[address, beds, baths, sqft]</span>
+Features: <span class="ph-key">[paste highlights]</span>
+Photos: <span class="ph-key">[attach images]</span>
+
+Output: catchy headline, 150-word description, 5 bullet highlights, and a CTA to book a viewing.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Recruitment sourcing agent</h4>
+          <p class="usecase-desc">Search for candidates matching a job description and draft personalized outreach messages.</p>
+          <div class="usecase-meta"><span class="price-tag">~$10 / role</span><span class="price-tag cost">deliverable value: $200–$800</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a recruitment sourcing agent.</span>
+Job description: <span class="ph-key">[paste JD]</span>
+Platform: <span class="ph-key">[LinkedIn via browser automation]</span>
+
+Steps:
+1. Search for candidates matching the JD.
+2. Score each by fit (0-100).
+3. Draft a personalized outreach message per top candidate.
+4. Output a sheet with name, score, and message.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Course & curriculum builder</h4>
+          <p class="usecase-desc">Turn a topic into a full course outline with modules, lessons, and quizzes.</p>
+          <div class="usecase-meta"><span class="price-tag">~$20 / course</span><span class="price-tag cost">deliverable value: $300–$1200</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Build a course outline.</span>
+Topic: <span class="ph-key">[TOPIC]</span>
+Audience: <span class="ph-key">[WHO]</span>
+Length: <span class="ph-key">[6 modules]</span>
+
+Output: course title, learning objectives, 6 modules each with 3 lessons, a quiz per module, and a final project brief.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Legal document drafter</h4>
+          <p class="usecase-desc">Generate first drafts of NDAs, privacy policies, and terms of service from templates.</p>
+          <div class="usecase-meta"><span class="price-tag">~$10 / document</span><span class="price-tag cost">deliverable value: $80–$400 (review required)</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Draft a legal document.</span>
+Document type: <span class="ph-key">[NDA / privacy policy / terms of service]</span>
+Party details: <span class="ph-key">[names, jurisdiction]</span>
+
+Output: a clean first-draft document marked “DRAFT — review with a licensed attorney before use.”
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>HR onboarding agent</h4>
+          <p class="usecase-desc">Generate onboarding docs, training schedules, and welcome emails for new hires.</p>
+          <div class="usecase-meta"><span class="price-tag">~$5 / hire</span><span class="price-tag cost">deliverable value: $50–$200</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build an HR onboarding agent.</span>
+New hire: <span class="ph-key">[name, role, start date]</span>
+
+Steps:
+1. Generate a welcome email.
+2. Build a 30-60-90 day onboarding plan.
+3. Create a training schedule.
+4. Draft a 1-week checklist.
+5. Email everything to the new hire and cc me.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Healthcare summary writer</h4>
+          <p class="usecase-desc">Summarize patient notes or research papers into structured clinical summaries (clinician-reviewed).</p>
+          <div class="usecase-meta"><span class="price-tag">~$5 / summary</span><span class="price-tag cost">deliverable value: $40–$150 (clinician-reviewed)</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>copy-paste</span></div>
+            <div class="prompt"><span class="action">Build a clinical summary.</span>
+Source: <span class="ph-key">[paste patient notes or research paper]</span>
+Output: structured summary with history, assessment, plan, and follow-up. Mark as “DRAFT — clinician review required.”
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>SEO indexing submission</h4>
+          <p class="usecase-desc">Submit new URLs to Google Search Console for indexing automatically when you publish.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: SEO velocity</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build an SEO indexing agent.</span>
+Connector: <span class="ph-key">[Search Console]</span>
+Trigger: when a new post is published.
+
+Steps:
+1. Detect new URLs from my CMS or Sheets.
+2. Submit each to Search Console for indexing.
+3. Log submission status.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+        <div class="usecase">
+          <div class="usecase-title"><h4>Slack / Teams ops agent</h4>
+          <p class="usecase-desc">Post daily standups, route approvals, and answer ops questions in Slack or Microsoft Teams.</p>
+          <div class="usecase-meta"><span class="price-tag">~$0 / run</span><span class="price-tag cost">deliverable value: hours saved per week</span></div>
+          <div class="prompt-block">
+            <div class="prompt-head"><span>Prompt template</span><span>build an agent</span></div>
+            <div class="prompt"><span class="action">Build a Slack/Teams ops agent.</span>
+Connector: <span class="ph-key">[Slack or Microsoft Teams]</span>
+Channel: <span class="ph-key">[CHANNEL]</span>
+
+Steps:
+1. Every morning, post a standup prompt asking for blockers.
+2. Collect responses and summarize.
+3. Route approval requests to the right person.
+4. Answer FAQ-style ops questions from a knowledge base.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section" id="pricing">
+  <div class="section-head">
+    <span class="eyebrow">Pricing</span>
+    <h2 class="h2">Start free. Scale when ready.</h2>
+    <p>Every use case above runs on a single subscription. Pick the tier that fits your monthly run volume. No credit card required to start.</p>
+  </div>
+  <div style="overflow-x:auto">
+    <table class="price-table">
+      <thead>
+        <tr><th>Plan</th><th>Price</th><th>Credits</th><th>Best for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="plan">Free</td><td class="price">$0/mo</td><td>30 one-time</td><td class="recom">Try it out, build your first agent.</td></tr>
+        <tr><td class="plan">Pro</td><td class="price">$20/mo</td><td>200/mo</td><td class="recom">Single operator running 5–10 agents daily.</td></tr>
+        <tr><td class="plan">Pro Plus</td><td class="price">$50/mo</td><td>600/mo</td><td class="recom">Creator running multiple agents + scheduled runs.</td></tr>
+        <tr><td class="plan">Max</td><td class="price">$150/mo</td><td>2000/mo</td><td class="recom">Teams running full automation pipelines.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="text-align:center;color:var(--ink-dim);font-size:0.85rem;margin-top:1.5rem;font-family:'JetBrains Mono',monospace">Costs shown per use case are estimates of what you can charge clients — not what you pay CREAO.</p>
+</section>
+
+<!-- ============ PROMPT LIBRARY ============ -->
+<section class="section" id="prompts">
+  <div class="section-head">
+    <span class="eyebrow">Prompt library</span>
+    <h2 class="h2">Every prompt in one place</h2>
+    <p>All prompts are stored inside each use case above. Click any category to expand it and copy any prompt directly into your CREAO chat. Here's the universal starter prompt to use as a guide.</p>
+  </div>
+  <div style="max-width:760px;margin:0 auto">
+    <div class="prompt-block">
+      <div class="prompt-head"><span>Universal starter prompt</span><span>use this first</span></div>
+      <div class="prompt"><span class="action">Build me an agent.</span>
+Name: <span class="ph-key">[AGENT NAME]</span>
+Purpose: <span class="ph-key">[WHAT IT DOES IN ONE LINE]</span>
+Inputs: <span class="ph-key">[LIST OF FIELDS]</span>
+Connectors needed: <span class="ph-key">[X / YouTube / Gmail / Sheets / Discord / Notion / Shopify]</span>
+Schedule: <span class="ph-key">[daily / hourly / on-demand]</span>
+Output format: <span class="ph-key">[email / PDF / sheet row / video file]</span>
+
+Steps:
+1. Write the code.
+2. Wire the connectors.
+3. Test it once with sample data.
+4. Save it as a reusable agent app.
+5. Set up the schedule.
+<button class="copy-btn" onclick="copyPrompt(this)">Copy</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEPLOYMENT GUIDE ============ -->
+<section class="section" id="deploy">
+  <div class="section-head">
+    <span class="eyebrow">Deploy guide</span>
+    <h2 class="h2">Ship this page yourself</h2>
+    <p>This page is a single-file HTML page. Clone it to GitHub and deploy to Vercel in under 5 minutes.</p>
+  </div>
+  <div style="max-width:760px;margin:0 auto">
+    <div class="step" style="margin-bottom:1rem">
+      <div class="step-num">01</div>
+      <h4>Create a new repo on GitHub</h4>
+      <p>Go to github.com/new → name it <code class="mono">creao-use-cases</code> → create it (don't add a README).</p>
+    </div>
+    <div class="step" style="margin-bottom:1rem">
+      <div class="step-num">02</div>
+      <h4>Push the files</h4>
+      <p>Add <code class="mono">index.html</code> (the page itself), <code class="mono">vercel.json</code> (deployment config), and <code class="mono">.gitignore</code>.</p>
+    </div>
+    <div class="step" style="margin-bottom:1rem">
+      <div class="step-num">03</div>
+      <h4>Import to Vercel</h4>
+      <p>Go to vercel.com/new → import your GitHub repo → leave build settings empty → click Deploy.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <h4>Get your live URL</h4>
+      <p>Vercel auto-detects it as a static site and deploys in seconds. Your live URL will be <code class="mono">creao-use-cases.vercel.app</code> (or your custom domain).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="cta-band">
+  <div class="hero-inner">
+    <h2 class="h2">Open CREAO. Pick a use case. Build it.</h2>
+    <p>Every prompt on this page is yours to use. Start with a free account, drop in any prompt above, and watch it run.</p>
+    <div class="hero-cta-row">
+      <a href="https://agent.creao.ai/@Sonofpeace" class="btn-primary" target="_blank" rel="noopener">Open CREAO Free →</a>
+      <a href="#categories" class="btn-ghost">Back to use cases</a>
+    </div>
+    <div class="aff-link">https://agent.creao.ai/@Sonofpeace</div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <p>Built with the CREAO Super Agent · Black & White Edition</p>
+  <p style="color:var(--ink-mute);font-size:0.85rem;margin-top:0.5rem">All use cases verified against the official CREAO platform capabilities. Pricing reflects real-world freelance rates.</p>
+  <div class="aff">https://agent.creao.ai/@Sonofpeace</div>
+</footer>
+
+<script>
+function toggleCat(el){
+  const body = el.nextElementSibling;
+  const isOpen = el.classList.contains('open');
+  el.classList.toggle('open', !isOpen);
+  body.classList.toggle('open', !isOpen);
+}
+function copyPrompt(btn){
+  const prompt = btn.closest('.prompt');
+  if(!prompt) return;
+  const text = prompt.cloneNode(true);
+  const cb = text.querySelector('.copy-btn');
+  if(cb) cb.remove();
+  const cleanText = text.innerText.replace(/^Copy$/gm,'').trim();
+  navigator.clipboard.writeText(cleanText).then(()=>{
+    const orig = btn.textContent;
+    btn.textContent = 'Copied ✓';
+    btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent = orig; btn.classList.remove('copied');},1600);
+  }).catch(()=>{
+    const orig = btn.textContent;
+    btn.textContent = 'Press Ctrl+C';
+    setTimeout(()=>{btn.textContent = orig;},1600);
+  });
+}
+// Open the first category by default
+document.addEventListener('DOMContentLoaded', ()=>{
+  const first = document.querySelector('.cat-head');
+  if(first){ toggleCat(first); }
+});
+</script>
+
+</body>
+</html>
