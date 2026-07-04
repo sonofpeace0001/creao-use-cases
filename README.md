@@ -31,6 +31,8 @@ A black-and-white landing page showcasing every CREAO use case across **18 categ
 
 - `index.html` — the single-file landing page (inline CSS + JS, no build step)
 - `creao-mark.svg` — CREAO brand mark used in the nav, hero, footer, and favicon
+- `creao-og.png` — 1200×630 social-share card (mark on dark bg) for Open Graph / Twitter
+- `apple-touch-icon.png` — 180×180 iOS home-screen icon (PNG, since iOS ignores SVG)
 - `creao-wordmark.png` — CREAO wordmark (legacy asset, no longer referenced)
 - `vercel.json` — Vercel static-site config (clean URLs, security headers)
 - `.gitignore` — standard ignores
